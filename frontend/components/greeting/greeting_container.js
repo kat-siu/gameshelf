@@ -7,7 +7,7 @@ const mapStateToProps = ({ session }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  logout: (id) => dispatch(logout(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Greeting);

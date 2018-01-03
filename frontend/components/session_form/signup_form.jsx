@@ -43,15 +43,15 @@ class SignupForm extends React.Component {
   // }
 
   renderErrors() {
-    return (
+    return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={i}>
+          <li key={`error-${i}`}>
             {error}
           </li>
         ))}
       </ul>
-    )
+    );
   }
 
   render() {
