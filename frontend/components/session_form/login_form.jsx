@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
-class SignupForm extends React.Component {
+class LoginForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -24,7 +24,7 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.signup(user);
+    this.props.login(user);
   }
 
   update(field) {
@@ -33,14 +33,6 @@ class SignupForm extends React.Component {
     });
   };
   }
-
-  // navLink() {
-  //   if (this.props.formType === 'login') {
-  //     return <Link to='/signup'>Sign Up Here</Link>
-  //   } else {
-  //     return <Link to='/login'>Login Here</Link>
-  //   }
-  // }
 
   renderErrors() {
     return (
@@ -58,12 +50,11 @@ class SignupForm extends React.Component {
     // {this.navLink()}
     return (
       <main className="main-home">
-        <div className="signup-form">
+        <div className="login-form">
           <form onSubmit={this.handleSubmit}>
-            New here? Create an account!
             {this.renderErrors()}
             <label>
-              <input className="signup-input"
+              <input className="login-input"
                 type='email'
                 value={this.state.username}
                 placeholder="Email address"
@@ -71,14 +62,14 @@ class SignupForm extends React.Component {
                 />
             </label>
             <label>
-              <input className="signup-input"
+              <input className="login-input"
                 type='password'
                 value={this.state.password}
                 placeholder="Password"
                 onChange={this.update('password')}
                 />
             </label>
-          <input className="signup-btn" type='submit' value='Sign up' />
+          <input className="login-btn" type='submit' value='Sign In' />
           </form>
         </div>
       </main>
@@ -86,4 +77,4 @@ class SignupForm extends React.Component {
   }
 };
 
-export default withRouter(SignupForm);
+export default withRouter(LoginForm);
