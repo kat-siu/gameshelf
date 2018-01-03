@@ -27,6 +27,14 @@ class LoginForm extends React.Component {
     this.props.login(user);
   }
 
+  handleGuestSubmit(e) {
+    e.preventDefault();
+    const guest = { username: "guest", password: "password" };
+    this.props.login(guest).then(() => {
+      this.props.history.push('/home');
+    });
+  }
+
   update(field) {
     return (e) => {this.setState({
       [field]: e.currentTarget.value
@@ -44,10 +52,9 @@ class LoginForm extends React.Component {
         ))}
       </ul>
     );
-  }
+   }
 
   render() {
-    // {this.navLink()}
     return (
       <div className="header">
         <h1>gameshelf</h1>
@@ -70,7 +77,8 @@ class LoginForm extends React.Component {
                 />
             </label>
           <input className="login-btn" type='submit' value='Sign In' />
-          {this.renderErrors()}
+          <button className="login-btn" onClick={this.handleGuestSubmit}>Demo</button>
+          <h3 className="errors">{this.props.errors}</h3>
           </form>
         </div>
       </div>

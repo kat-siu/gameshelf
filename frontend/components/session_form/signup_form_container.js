@@ -7,7 +7,7 @@ import SignupForm from './signup_form';
 const mapStateToProps = state => {
   return {
     loggedIn: Boolean(state.session.currentUser),
-    errors: state.errors.session
+    errors: state.errors.signup
   };
 };
 
