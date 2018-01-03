@@ -2,7 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .main-home {
-  background-image: url('../../images/banner_background.jpg')
+  // background-image: url('../../images/banner_background.jpg')
+}
+
+.header {
+  width: 400px;
+  float: right;
+  padding: -30px;
+}
+
+.login-form {
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .signup-form {

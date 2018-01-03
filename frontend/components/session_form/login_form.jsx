@@ -12,7 +12,7 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleChange = this.handleChange.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
           <li key={i}>
             {error}
           </li>
-        ))};
+        ))}
       </ul>
     )
   }
@@ -49,10 +49,10 @@ class LoginForm extends React.Component {
   render() {
     // {this.navLink()}
     return (
-      <main className="main-home">
+      <div className="header">
+        <h1>gameshelf</h1>
         <div className="login-form">
           <form onSubmit={this.handleSubmit}>
-            {this.renderErrors()}
             <label>
               <input className="login-input"
                 type='email'
@@ -70,9 +70,10 @@ class LoginForm extends React.Component {
                 />
             </label>
           <input className="login-btn" type='submit' value='Sign In' />
+          {this.renderErrors()}
           </form>
         </div>
-      </main>
+      </div>
     )
   }
 };

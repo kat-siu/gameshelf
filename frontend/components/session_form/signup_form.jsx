@@ -12,7 +12,7 @@ class SignupForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleChange = this.handleChange.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -49,7 +49,7 @@ class SignupForm extends React.Component {
           <li key={i}>
             {error}
           </li>
-        ))};
+        ))}
       </ul>
     )
   }

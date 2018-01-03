@@ -5,10 +5,10 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
 
+// <h1>gameshelf</h1>
 const App = () => (
   <div>
     <header>
-      <h1>gameshelf</h1>
       <GreetingContainer />
     </header>
 
