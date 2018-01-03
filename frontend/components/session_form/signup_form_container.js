@@ -8,6 +8,15 @@ const mapStateToProps = state => {
     errors: state.errors.session
   };
 };
+
+// const mapStateToProps = ({session}) => {
+//   return {
+//     currentUser: session.currentUser,
+//     loggedIn: Boolean(session.currentUser),
+//     errors: session.errors.signup
+//   };
+// };
+
 //
 // const mapDispatchToProps = (dispatch, ownProps) => {
 //   const formType = ownProps.location.pathname.slice(1);

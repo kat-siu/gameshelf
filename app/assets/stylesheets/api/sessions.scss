@@ -6,25 +6,28 @@
 }
 
 .header {
-  width: 400px;
-  float: right;
-  padding: -30px;
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .login-form {
   display: inline-block;
-  padding-top: 5px;
+  padding-top: 30px;
   padding-bottom: 5px;
 }
 
 .signup-form {
   font-family: 'Fira Sans', sans-serif;
-  padding: 5px;
-  margin: 25px 20px 0 0;
+  padding: 10px;
   float: right;
   font-size: 18px;
-  display: block;
   width: 280px;
+  margin-top: 91px;
+  margin-right: 394px;
+  margin-left: auto;
 }
 
 .signup-input {
