@@ -1,0 +1,35 @@
+// Place all the styles related to the api/sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.main-home {
+  background-image: url('../../images/banner_background.jpg')
+}
+
+.signup-form {
+  font-family: 'Fira Sans', sans-serif;
+  padding: 5px;
+  margin: 25px 20px 0 0;
+  float: right;
+  font-size: 18px;
+  display: block;
+  width: 280px;
+}
+
+.signup-input {
+  width: 270px;
+  padding: 5px 5px;
+  margin-top: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signup-btn {
+  width: 85px;
+  height: 25px;
+  font-size: 14px;
+  background-color: #3CC47C;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 5px;
+}
