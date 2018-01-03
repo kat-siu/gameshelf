@@ -57,28 +57,30 @@ class SignupForm extends React.Component {
   render() {
     // {this.navLink()}
     return (
-      <div className="signup-form">
-        <form onSubmit={this.handleSubmit}>
-          New here? Create an account!
-          <label>
-            <input className="signup-input"
-              type='text'
-              value={this.state.username}
-              placeholder="Username"
-              onChange={this.update('username')}
-              />
-          </label>
-          <label>
-            <input className="signup-input"
-              type='password'
-              value={this.state.password}
-              placeholder="Password"
-              onChange={this.update('password')}
-              />
-          </label>
-        <input className="signup-btn" type='submit' value='Sign up' />
-        </form>
-      </div>
+      <main className="main-home">
+        <div className="signup-form">
+          <form onSubmit={this.handleSubmit}>
+            New here? Create an account!
+            <label>
+              <input className="signup-input"
+                type='text'
+                value={this.state.username}
+                placeholder="Username"
+                onChange={this.update('username')}
+                />
+            </label>
+            <label>
+              <input className="signup-input"
+                type='password'
+                value={this.state.password}
+                placeholder="Password"
+                onChange={this.update('password')}
+                />
+            </label>
+          <input className="signup-btn" type='submit' value='Sign up' />
+          </form>
+        </div>
+      </main>
     )
   }
 };

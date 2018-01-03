@@ -29105,33 +29105,37 @@ var SignupForm = function (_React$Component) {
     value: function render() {
       // {this.navLink()}
       return _react2.default.createElement(
-        'div',
-        { className: 'signup-form' },
+        'main',
+        { className: 'main-home' },
         _react2.default.createElement(
-          'form',
-          { onSubmit: this.handleSubmit },
-          'New here? Create an account!',
+          'div',
+          { className: 'signup-form' },
           _react2.default.createElement(
-            'label',
-            null,
-            _react2.default.createElement('input', { className: 'signup-input',
-              type: 'text',
-              value: this.state.username,
-              placeholder: 'Username',
-              onChange: this.update('username')
-            })
-          ),
-          _react2.default.createElement(
-            'label',
-            null,
-            _react2.default.createElement('input', { className: 'signup-input',
-              type: 'password',
-              value: this.state.password,
-              placeholder: 'Password',
-              onChange: this.update('password')
-            })
-          ),
-          _react2.default.createElement('input', { className: 'signup-btn', type: 'submit', value: 'Sign up' })
+            'form',
+            { onSubmit: this.handleSubmit },
+            'New here? Create an account!',
+            _react2.default.createElement(
+              'label',
+              null,
+              _react2.default.createElement('input', { className: 'signup-input',
+                type: 'text',
+                value: this.state.username,
+                placeholder: 'Username',
+                onChange: this.update('username')
+              })
+            ),
+            _react2.default.createElement(
+              'label',
+              null,
+              _react2.default.createElement('input', { className: 'signup-input',
+                type: 'password',
+                value: this.state.password,
+                placeholder: 'Password',
+                onChange: this.update('password')
+              })
+            ),
+            _react2.default.createElement('input', { className: 'signup-btn', type: 'submit', value: 'Sign up' })
+          )
         )
       );
     }
