@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 20180104200855) do
 
   create_table "games", force: :cascade do |t|
     t.string "title", null: false
+    t.integer "year", null: false
     t.text "description", null: false
+    t.string "platform", null: false
     t.string "cover_img_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
