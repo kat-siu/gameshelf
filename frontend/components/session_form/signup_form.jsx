@@ -57,7 +57,7 @@ class SignupForm extends React.Component {
   render() {
     // {this.navLink()}
     return (
-      <main className="main-home">
+      <div className="signup-form-box">
         <div className="signup-form">
           <form onSubmit={this.handleSubmit}>
             New here? Create an account!
@@ -81,7 +81,7 @@ class SignupForm extends React.Component {
           <input className="signup-btn" type='submit' value='Sign up' />
           </form>
         </div>
-      </main>
+      </div>
     )
   }
 };
