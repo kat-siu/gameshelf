@@ -6,7 +6,6 @@
 }
 
 .header {
-  border-bottom: 1px solid dimgray;
   margin: 0;
 }
 
@@ -15,7 +14,6 @@
   background-image: url('https://s3.us-east-2.amazonaws.com/gameshelf/landing_background.png');
   background-position: center center;
   background-repeat:  no-repeat;
-  // background-attachment: fixed;
   min-height: 100%;
   min-width: 1024px;
   width: 100%;
@@ -50,6 +48,12 @@
   font-size: 13px;
 }
 
+input:focus {
+    outline: none !important;
+    border:1px solid #99572b;
+    box-shadow: 0 0 5px #99572b;
+  }
+
 .login-btn {
   border-radius: 3px;
   background-color: #382110;
@@ -65,14 +69,19 @@
   }
 }
 
+.signup-form-box {
+  border-top: 1px solid black;
+  margin-top: 90px;
+}
+
 .signup-form {
   font-family: 'Fira Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   font-size: 18px;
-  margin-right: 370px;
-  margin-top: 200px;
+  margin-right: 350px;
+  margin-top: 280px;
 }
 
 .signup-input {
@@ -85,6 +94,10 @@
   background: #FFFFFF;
   border-radius: 3px;
   border: #DCD6CC 1px solid;
+
+  &:focus {
+    border: #928162 1px solid;
+  }
 }
 
 .signup-btn {
