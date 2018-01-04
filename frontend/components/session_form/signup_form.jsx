@@ -34,14 +34,6 @@ class SignupForm extends React.Component {
   };
   }
 
-  // navLink() {
-  //   if (this.props.formType === 'login') {
-  //     return <Link to='/signup'>Sign Up Here</Link>
-  //   } else {
-  //     return <Link to='/login'>Login Here</Link>
-  //   }
-  // }
-
   renderErrors() {
     return(
       <ul>
@@ -55,7 +47,6 @@ class SignupForm extends React.Component {
   }
 
   render() {
-    // {this.navLink()}
     return (
       <div className="signup-form-box">
         <div className="signup-form">

@@ -61,7 +61,7 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="header">
+      <div className="landing-page">
         <div className="logo-and-form">
           <h1>gameshelf</h1>
           <div className="login-form">

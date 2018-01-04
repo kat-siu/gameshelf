@@ -11,12 +11,31 @@
 }
 
 body {
+  // background-image: url('../landing_background.png');
+  // background-position: center center;
+	// background-repeat:  no-repeat;
+	// background-attachment: fixed;
+	// background-size:  cover;
+  // font-family: 'Fira Sans', sans-serif;
+}
+
+.landing-page {
+  background-color: #00afcc;
   background-image: url('../landing_background.png');
   background-position: center center;
-	background-repeat:  no-repeat;
-	background-attachment: fixed;
-	background-size:  cover;
-  font-family: 'Fira Sans', sans-serif;
+  background-repeat:  no-repeat;
+  // background-attachment: fixed;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+html {
 }
 
 .logo-and-form {
@@ -84,7 +103,7 @@ body {
   width: 85px;
   padding: 8px;
   border: none;
-  font-size: 14px;
+  font-size: 18px;
   background-color: #fdd05f;
   border-radius: 4px;
   text-align: center;
