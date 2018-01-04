@@ -10,18 +10,9 @@
   margin: 0;
 }
 
-body {
-  // background-image: url('../landing_background.png');
-  // background-position: center center;
-	// background-repeat:  no-repeat;
-	// background-attachment: fixed;
-	// background-size:  cover;
-  // font-family: 'Fira Sans', sans-serif;
-}
-
 .landing-page {
   background-color: #00afcc;
-  background-image: url('../landing_background.png');
+  background-image: url('https://s3.us-east-2.amazonaws.com/gameshelf/landing_background.png');
   background-position: center center;
   background-repeat:  no-repeat;
   // background-attachment: fixed;
@@ -33,9 +24,6 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-html {
 }
 
 .logo-and-form {

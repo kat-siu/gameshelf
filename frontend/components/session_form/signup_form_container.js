@@ -11,14 +11,6 @@ const mapStateToProps = state => {
   };
 };
 
-// const mapStateToProps = ({session}) => {
-//   return {
-//     currentUser: session.currentUser,
-//     loggedIn: Boolean(session.currentUser),
-//     errors: session.errors.signup
-//   };
-// };
-
 const mapDispatchToProps = dispatch => {
   return {
     signup: user => dispatch(signup(user))
