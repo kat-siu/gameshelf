@@ -12,6 +12,7 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuestSubmit = this.handleGuestSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
 
@@ -29,9 +30,13 @@ class LoginForm extends React.Component {
 
   handleGuestSubmit(e) {
     e.preventDefault();
-    const guest = { username: "guest@gmail.com", password: "password" };
-    this.props.login(guest).then(() => {
-      this.props.history.push('/home');
+    this.setState({
+      username: "guest@gmail.com",
+      password: "password"
+    }, () => {
+      setTimeout(() => {
+        this.props.login(this.state);
+      }, 500);
     });
   }
 
