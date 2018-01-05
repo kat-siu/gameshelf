@@ -1,55 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// const GamesIndexItem = props => {
+//   <Link to={`/games/${props.game.id}`}>
+//     <img src={props.games.id.cover_img_url} />
+//   </Link>
+// };
+
 class GamesIndexItem extends React.Component {
   constructor(props) {
     super(props);
   }
 
-//   render() {
-//     return (
-//       <div>
-//         <li>
-//           <Link to={`/games/${game.id}`}>
-//             <img src={this.props.games.cover_img_url} />
-//           </Link>
-//         </li>
-//       </div>
-//     )
-//   }
-// }
-// const GamesIndexItem = ({ games }) => (
-//   <div>
-//     <Link to={`/books/${game.id}`}>
-//       <img src={this.props.games.cover_img_url} />
-//     </Link>
-//   </div>
-// );
-
   render() {
-    const games = this.props.games;
-
-    return (
-      <div>
-        games.map(game => {
-          <Link to={`/games/${game.id}`}>
-            <img src={game.cover_img_url} />
-          </Link>
-        });
-      </div>
+    return(
+      <li>
+        <Link to={`/games/${game.id}`}>
+          <img src={game.cover_img_url} />
+        </Link>
+      </li>
     )
   }
 }
-  // render() {
-  //   const games = this.props.games;
-  //   return (
-  //     <div>
-  //       <ul>
-  //         {games.map(game =>
-  //           <GamesIndexItem key={game.id} game={game} />)}
-  //       </ul>
-  //     </div>
-  //   )
-  // }
 
-export default GamesIndexItem;
+export default GamesIndexItem
