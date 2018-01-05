@@ -63,7 +63,11 @@ class LoginForm extends React.Component {
     return (
       <div className="landing-page">
         <div className="logo-and-form">
-          <h1>gameshelf</h1>
+          <div className='navbar-logo'>
+            <Link to='/'>
+              <img className='landing-logo-img' src="https://s3.us-east-2.amazonaws.com/gameshelf/logo.png" />
+            </Link>
+          </div>
           <div className="login-form">
             <form onSubmit={this.handleSubmit}>
               <label>

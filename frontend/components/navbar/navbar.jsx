@@ -11,6 +11,7 @@ class navBar extends React.Component {
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
+    this.props.history.push('/');
   }
 
   render() {
@@ -18,11 +19,13 @@ class navBar extends React.Component {
       return (
         <div className='navbar'>
           <div className='navbar-logo'>
-            <h1>gameshelf</h1>
+            <img className='navbar-logo-img' src="https://s3.us-east-2.amazonaws.com/gameshelf/logo.png" />
           </div>
           <div className='navbar-logout'>
             <h2>Welcome, {this.props.currentUser.username}!</h2>
-            <button onClick={this.logoutUser}>Logout</button>
+            <Link to='/'>
+              <button onClick={this.logoutUser}>Logout</button>
+            </Link>
           </div>
         </div>
       )

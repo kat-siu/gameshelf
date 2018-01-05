@@ -1,14 +1,6 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.main-home {
-  // background-image: url('../../images/banner_background.jpg')
-}
-
-.header {
-  margin: 0;
-}
-
 .landing-page {
   background-color: #00afcc;
   background-image: url('https://s3.us-east-2.amazonaws.com/gameshelf/landing_background.png');
@@ -24,12 +16,16 @@
   z-index: -1;
 }
 
+.landing-logo-img {
+    width: 160px;
+    padding: 30px;
+    margin-right: 360px;
+}
+
 .logo-and-form {
-  width: 1000px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
 }
 
 .login-form {

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { fetchGames } from '../../actions/game_actions';
 import GamesIndex from './games_index';
 
-const mapStateToProps = ({ games }) => {
+const mapStateToProps = state => {
   return {
     games: Object.values(state.entities.games),
   };
