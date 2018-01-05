@@ -4,13 +4,14 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 
 const Auth = ({ component: Component, path, loggedIn }) => (
   <Route path={path} render={(props) => (
-    !loggedIn ? (
-      <Component {...props} />
-    ) : (
+    loggedIn ? (
       <Redirect to="/my_games" />
+    ) : (
+      <Component {...props} />
     )
   )} />
 );
+// ^if you're already logged in, you don't need to see this page
 
 const Protected = ({ component: Component, path, loggedIn }) => (
   <Route path={path} render={(props) => (

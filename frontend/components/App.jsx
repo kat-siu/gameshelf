@@ -4,7 +4,7 @@ import NavBarContainer from './navbar/navbar_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import GamesIndexContainer from './games/games_index_container';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
@@ -13,7 +13,7 @@ const App = () => (
     </header>
     <AuthRoute exact path="/" component={LoginFormContainer} />
     <AuthRoute exact path="/" component={SignupFormContainer} />
-    <Route exact path="/games" component={GamesIndexContainer} />
+    <ProtectedRoute exact path="/games" component={GamesIndexContainer} />
   </div>
 );
 

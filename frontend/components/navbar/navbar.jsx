@@ -11,7 +11,6 @@ class navBar extends React.Component {
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
-    this.props.history.push('/');
   }
 
   render() {
@@ -23,13 +22,11 @@ class navBar extends React.Component {
           </div>
           <div className='navbar-links'>
             <Link to='/games'>Browse</Link>
-            <Link to='#'>My Games</Link>
+            <Link to='/my_games'>My Games</Link>
           </div>
           <div className='navbar-logout'>
             <h2>Welcome, {this.props.currentUser.username}!</h2>
-            <Link to='/'>
               <button onClick={this.logoutUser}>Logout</button>
-            </Link>
           </div>
         </div>
       )
