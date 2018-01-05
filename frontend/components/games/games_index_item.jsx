@@ -11,4 +11,4 @@ const GamesIndexItem = props => {
   )
 }
 
-export default withRouter(GamesIndexItem);
+export default GamesIndexItem;

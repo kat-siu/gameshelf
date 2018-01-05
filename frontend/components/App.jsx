@@ -12,11 +12,11 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
+
     <AuthRoute exact path="/" component={LoginFormContainer} />
     <AuthRoute exact path="/" component={SignupFormContainer} />
     <ProtectedRoute exact path="/games" component={GamesIndexContainer} />
-    <Route path="/games/:gameId" component={GameShowContainer} />
-
+    <Route exact path="/games/:gameId" component={GameShowContainer} />
   </div>
 );
 

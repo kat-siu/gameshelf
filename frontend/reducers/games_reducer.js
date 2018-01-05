@@ -3,14 +3,11 @@ import { merge } from 'lodash';
 
 const GamesReducer = (state = {}, action) => {
   Object.freeze(state);
-  let newState;
-
   switch (action.type) {
     case RECEIVE_ALL_GAMES:
       return action.games;
     case RECEIVE_SINGLE_GAME:
-      newState = merge({}, state, { [action.game.id]: action.game });
-      return newState;
+      return merge({}, state, { [action.game.id]: action.game });
     default:
       return state;
   }

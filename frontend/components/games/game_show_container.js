@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchGame } from '../../actions/game_actions';
-import GameShow from './games_index';
+import GameShow from './game_show';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -8,15 +8,6 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-// const mapStateToProps = (state, { match }) => {
-//   const gameId = parseInt(match.params.gameId);
-//   const game = fetchGame(state.entities.games, match.params.gameId);
-//   return {
-//     gameId,
-//     game
-//   };
-// };
-//
 const mapDispatchToProps = dispatch => {
   return {
     fetchGame: (id) => dispatch(fetchGame(id))
