@@ -5,7 +5,7 @@ export const fetchGames = () => {
   });
 };
 
-export const fetchGame = game => {
+export const fetchGame = id => {
   return $.ajax({
     method: 'get',
     url: `/api/games/${id}`,

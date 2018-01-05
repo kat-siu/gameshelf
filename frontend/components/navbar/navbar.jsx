@@ -18,7 +18,9 @@ class navBar extends React.Component {
       return (
         <div className='navbar'>
           <div className='navbar-logo'>
-            <img className='navbar-logo-img' src="https://s3.us-east-2.amazonaws.com/gameshelf/logo.png" />
+            <Link to='/'>
+              <img className='landing-logo-img' src="https://s3.us-east-2.amazonaws.com/gameshelf/logo.png" />
+            </Link>
           </div>
           <div className='navbar-links'>
             <Link to='/games'>Browse</Link>

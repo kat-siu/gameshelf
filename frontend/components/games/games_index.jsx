@@ -1,6 +1,5 @@
 import React from 'react';
 import GamesIndexItem from './games_index_item';
-import GamesIndexContainer from './games_index_container';
 
 class GamesIndex extends React.Component {
 
@@ -12,9 +11,8 @@ class GamesIndex extends React.Component {
     return (
       <div>
         <h2>All Games:</h2>
-        <ul>
-          {
-            this.props.games.map(game => (
+        <ul className="games-index">
+          { this.props.games.map(game => (
               <GamesIndexItem key={game.id} game={game} />
             ))
           }

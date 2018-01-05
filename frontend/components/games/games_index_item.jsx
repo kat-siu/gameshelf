@@ -5,7 +5,7 @@ const GamesIndexItem = props => {
   return (
     <li key={`${props.game.id}`}>
       <Link to={`/games/${props.game.id}`}>
-        <img src={`${props.game.cover_img_url}`} />
+        <img className='game-index-img' src={`${props.game.cover_img_url}`} />
       </Link>
     </li>
   )
