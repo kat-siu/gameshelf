@@ -19,4 +19,20 @@ Game.create!([
     platform: 'Nintendo Switch',
     cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/Super_Mario_Odyssey_(artwork).jpg',
   }
+
+  {
+    title: 'Hello Neighbor',
+    year: 2017,
+    description: "Hello Neighbor is a stealth horror game about sneaking into your neighbor's house to figure out what horrible secrets he's hiding in the basement. You play against an advanced AI that learns from your every move. Really enjoying climbing through that backyard window? Expect a bear trap there. Sneaking through the front door? There'll be cameras there soon. Trying to escape? The Neighbor will find a shortcut and catch you.",
+    platform: 'Xbox One, PC (Microsoft Windows)',
+    cover: '//images.igdb.com/igdb/image/upload/t_thumb/zsvyzrqpbuvtfnpdagfp.jpg'
+  }
+
+  {
+    title: 'The Last of Us: Part II',
+    year: 2018,
+    description: 'Set 5 years after the events of the last of us, Joel and Ellie return on their journey through the ruined cities of America, their path ahead of them will be unfold.',
+    platform: 'PlayStation 4',
+    cover: '//images.igdb.com/igdb/image/upload/t_thumb/murzziwvvmzacglj5ch5.jpg'
+  }
   ])

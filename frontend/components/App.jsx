@@ -3,6 +3,7 @@ import { HashRouter, Route } from 'react-router-dom';
 import NavBarContainer from './navbar/navbar_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
+import GameIndexContainer from './games/games_index_container';
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
@@ -12,6 +13,8 @@ const App = () => (
     </header>
     <AuthRoute exact path="/" component={LoginFormContainer}/>
     <AuthRoute exact path="/" component={SignupFormContainer}/>
+    <AuthRoute exact path="/games" component={GamesIndexContainer}/>
+
   </div>
 );
 
