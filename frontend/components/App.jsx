@@ -18,7 +18,7 @@ const App = () => (
 
       <Switch>
         <ProtectedRoute exact path="/games" component={GamesIndexContainer} />
-        <ProtectedRoute exact path="/games/:gameId" component={GameShowContainer} />
+        <Route exact path="/games/:gameId" component={GameShowContainer} />
       </Switch>
   </div>
 );

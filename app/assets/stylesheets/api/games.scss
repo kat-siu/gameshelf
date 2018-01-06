@@ -24,6 +24,7 @@
   top: 10px;
   bottom: 10px;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .innerContent img {
@@ -78,4 +79,13 @@
         width: 25%;
         padding-bottom: 25%;
     }
+}
+
+.game-show-box {
+  width: 100%;
+  overflow: hidden;
+  margin: 10px;
+  width: 1300px;
+  float: right;
+  margin-top: 100px;
 }

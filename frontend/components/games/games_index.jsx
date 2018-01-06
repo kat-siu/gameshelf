@@ -21,9 +21,9 @@ class GamesIndex extends React.Component {
             <div className="box">
               <div className="innerContent">
                 <GamesIndexItem key={game.id} game={game} />
-                  <div className="titleBox">
-                    {game.title}
-                  </div>
+                <div className="titleBox">
+                  {game.title} ({game.year})
+                </div>
               </div>
             </div>
           </div>

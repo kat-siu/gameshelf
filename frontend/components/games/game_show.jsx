@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import Loader from 'react-loaders';
+
 
 class GameShow extends React.Component {
 
@@ -8,34 +10,19 @@ class GameShow extends React.Component {
   }
 
   render() {
+
     return (
-      <div>
-        <Link to="/games">Back to all games</Link>
-        <ul>
-          <li><h2>{this.props.game.title}</h2></li>
-          <li>{this.props.game.cover_img_url}</li>
-          <li>{this.props.game.year}</li>
-          <li>{this.props.game.platform}</li>
-          <li>{this.props.game.description}</li>
-        </ul>
+      <div className="game-show-box">
+        <Link to="/games">&lt;&lt; Back to all games</Link>
+        <div classname="game-details">
+          <div><h2>{this.props.game.title} ({this.props.game.year})</h2></div>
+          <div><img src={`${this.props.game.cover_img_url}`} /></div>
+          <div><b>Platform:</b> {this.props.game.platform}</div>
+          <div><b>Description:</b> {this.props.game.description}</div>
+        </div>
       </div>
     )
   }
 }
 
 export default GameShow;
-
-// const GameShow = ({ game, gameId, fetchGame }) => {
-//   const games = {
-//     [gameId]: game
-//   };
-//
-//   return (
-//     <div>
-//       <Link to="/games">Back to all games</Link>
-//       <div>
-//         <GameDetail game={game} />
-//       </div>
-//     </div>
-//   )
-// }
