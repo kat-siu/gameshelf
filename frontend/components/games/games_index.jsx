@@ -17,21 +17,29 @@ class GamesIndex extends React.Component {
     } else {
       games = this.props.games.map(game => {
         return (
-          <li key={game.id}>
-            <GamesIndexItem game={game} />
-          </li>
+          <div className="no-touch">
+            <div className="box">
+              <div className="innerContent">
+                <GamesIndexItem key={game.id} game={game} />
+                  <div className="titleBox">
+                    {game.title}
+                  </div>
+              </div>
+            </div>
+          </div>
         )
       })
     }
-    
+
     return (
       <div>
-        <h2>All Games:</h2>
-        <ul className="games-index">
+        <div id="wrap">
+          <h2>All Games:</h2>
           { games }
-        </ul>
+        </div>
       </div>
     )
+
   }
 }
 

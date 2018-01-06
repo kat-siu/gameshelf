@@ -71,7 +71,8 @@ class LoginForm extends React.Component {
           <div className="login-form">
             <form onSubmit={this.handleSubmit}>
               <label>
-                <input className="login-input"
+                <input required
+                  className="login-input"
                   type='email'
                   value={this.state.username}
                   placeholder="Email address"
@@ -79,7 +80,8 @@ class LoginForm extends React.Component {
                   />
               </label>
               <label>
-                <input className="login-input"
+                <input required
+                  className="login-input"
                   type='password'
                   value={this.state.password}
                   placeholder="Password"

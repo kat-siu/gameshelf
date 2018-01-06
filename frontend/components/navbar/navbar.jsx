@@ -16,21 +16,19 @@ class navBar extends React.Component {
   render() {
     if (this.props.currentUser) {
       return (
-        <div className='navbar'>
-          <div className='navbar-logo'>
-            <Link to='/'>
-              <img className='landing-logo-img' src="https://s3.us-east-2.amazonaws.com/gameshelf/logo.png" />
-            </Link>
-          </div>
-          <div className='navbar-links'>
-            <Link to='/games'>Browse</Link>
-            <Link to='/my_games'>My Games</Link>
-          </div>
-          <div className='navbar-logout'>
-            <h2>Welcome, {this.props.currentUser.username}!</h2>
-              <button onClick={this.logoutUser}>Logout</button>
-          </div>
-        </div>
+        <nav>
+          <ul className="nav-items">
+            <li>
+              <Link to='/'>
+                <img className='logo-img' src="https://s3.us-east-2.amazonaws.com/gameshelf/logo.png" />
+              </Link>
+            </li>
+            <li className="nav-link"><Link to='/games'>Browse</Link></li>
+            <li className="nav-link"><Link to='/my_games'>My Games</Link></li>
+            <li className="nav-welcome">Welcome, {this.props.currentUser.username}!</li>
+            <li className="nav-logout"><button className='logout-btn' onClick={this.logoutUser}>Sign Out</button></li>
+          </ul>
+        </nav>
       )
     } else {
       return (

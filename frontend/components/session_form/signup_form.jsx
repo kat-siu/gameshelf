@@ -53,7 +53,8 @@ class SignupForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             New here? Create an account!
             <label>
-              <input className="signup-input"
+              <input required
+                className="signup-input"
                 type='email'
                 value={this.state.username}
                 placeholder="Email address"
@@ -61,15 +62,16 @@ class SignupForm extends React.Component {
                 />
             </label>
             <label>
-              <input className="signup-input"
+              <input required
+                className="signup-input"
                 type='password'
                 value={this.state.password}
                 placeholder="Password"
                 onChange={this.update('password')}
                 />
             </label>
+              {this.renderErrors()}
           <input className="signup-btn" type='submit' value='Sign up' />
-          {this.renderErrors()}
           </form>
         </div>
       </div>
