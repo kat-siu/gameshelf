@@ -9,7 +9,7 @@
 User.destroy_all
 Game.destroy_all
 
-guest = User.create!(username:"guest@gmail.com", password:"password")
+guest = User.create!(name: 'Guest', username:"guest@gmail.com", password:"password")
 
 Game.create!(
   title: 'DOOM',

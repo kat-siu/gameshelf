@@ -55,6 +55,15 @@ class SignupForm extends React.Component {
             <label>
               <input required
                 className="signup-input"
+                type='text'
+                value={this.state.name}
+                placeholder="Name"
+                onChange={this.update('name')}
+                />
+            </label>
+            <label>
+              <input required
+                className="signup-input"
                 type='email'
                 value={this.state.username}
                 placeholder="Email address"

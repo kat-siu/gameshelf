@@ -25,7 +25,7 @@ class navBar extends React.Component {
             </li>
             <li className="nav-link"><Link to='/games'>Browse</Link></li>
             <li className="nav-link"><Link to='/my_games'>My Games</Link></li>
-            <li className="nav-welcome">Welcome, {this.props.currentUser.username}!</li>
+            <li className="nav-welcome">Welcome, {this.props.currentUser.name}!</li>
             <li className="nav-logout"><button className='logout-btn' onClick={this.logoutUser}>Sign Out</button></li>
           </ul>
         </nav>

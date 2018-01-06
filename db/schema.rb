@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20180106214903) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name", null: false
     t.string "username", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
