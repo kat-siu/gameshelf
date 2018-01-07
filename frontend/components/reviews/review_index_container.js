@@ -3,12 +3,11 @@ import { fetchReviews, createReview, deleteReview, clearReviewErrors } from '../
 import { fetchGame } from '../../actions/game_actions';
 import ReviewIndex from './review_index';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
-    game: ownProps.game,
-    reviews: fetchReviews(state),
+    reviews: Object.keys(state.reviews).map(id => state.reviews[id]),
     currentUser: state.session.currentUser,
-    errors: state.errors.review,
+    errors: state.errors.review || [],
   };
 };
 

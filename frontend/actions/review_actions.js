@@ -1,6 +1,7 @@
 import * as ReviewApiUtil from '../util/review_api_util';
 
 export const RECEIVE_ALL_REVIEWS = 'RECEIVE_ALL_REVIEWS';
+export const RECEIVE_SINGLE_REVIEW = 'RECEIVE_SINGLE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
 export const CLEAR_REVIEW_ERRORS = 'CLEAR_REVIEW_ERRORS';
@@ -9,6 +10,13 @@ export const receiveReviews = reviews => {
   return {
     type: RECEIVE_ALL_REVIEWS,
     reviews
+  };
+};
+
+export const receiveReview = reviews => {
+  return {
+    type: RECEIVE_SINGLE_REVIEW,
+    review
   };
 };
 

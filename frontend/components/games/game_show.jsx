@@ -11,9 +11,9 @@ class GameShow extends React.Component {
     super(props);
   }
 
-  // componentWillMount() {
-  //   this.props.fetchReviews(this.props.match.params.gameId);
-  // }
+  componentWillMount() {
+    this.props.fetchReviews(this.props.match.params.gameId);
+  }
 
   componentDidMount() {
     this.props.fetchGame(this.props.match.params.gameId);

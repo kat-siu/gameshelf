@@ -7,7 +7,7 @@ export const fetchReviews = gameId => {
 
 export const createReview = review => {
   return $.ajax({
-    url: `/api/games/${game_id}/reviews`,
+    url: `/api/games/${review.id}/reviews`,
     method: 'post',
     data: { review },
   });

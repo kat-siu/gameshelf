@@ -25,21 +25,18 @@ class ReviewIndex extends React.Component {
     this.props.createReview({
       body: this.state.body,
       game_id: this.props.gameId,
-    }).then(() => this.setState({
-      body: ""
-    })).then(() => this.clearReviewErrors());
+    });
   }
 
   componentDidMount() {
     if (this.props.gameId) {
-      this.props.fetchReviews(this.props.gameId);
+      this.props.fetchReviews(this.props.match.params.gameId).then(() => this.props.clearErrors());
     }
-    this.props.clearReviewErrors();
   }
 
-  componentWillUnmount() {
-    this.props.clearReviewErrors();
-  }
+  // componentWillUnmount() {
+  //   this.props.clearReviewErrors();
+  // }
 
   update(field) {
     return (e) => {this.setState({
@@ -60,6 +57,7 @@ class ReviewIndex extends React.Component {
    }
 
    renderReviewForm() {
+     debugger
      return (
        <div className="review-form">
          <form onSubmit={this.handleSubmit}>
@@ -79,10 +77,12 @@ class ReviewIndex extends React.Component {
              cols="30"
              rows="10"
              value={this.state.body}
+             placeholder="What did you think of this game?"
              onChange={this.update("body")}
            />
            <br/>
-           <input type="submit" />
+           <input type="submit" value="Add Review" />
+           <h3 className="errors">{this.props.errors}</h3>
          </form>
          <button onClick={this.navigateToGameShow}>Cancel</button>
        </div>

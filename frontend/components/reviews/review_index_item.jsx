@@ -43,6 +43,7 @@ class ReviewIndexItem extends React.Component {
   }
 
   render() {
+    debugger
     return (
       <li>{ this.renderReview() }</li>
     )
