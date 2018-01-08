@@ -25,14 +25,14 @@ export const receiveUserErrors = errors => {
   };
 };
 
-export const login = user => dispatch => (
-  SessionApiUtil.login(user).then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveSessionErrors(errors.responseJSON)))
-);
+export const login = user => dispatch => {
+  return SessionApiUtil.login(user).then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveSessionErrors(errors.responseJSON)));
+};
 
-export const logout = () => dispatch => (
-  SessionApiUtil.logout().then(user => dispatch(receiveCurrentUser(null)))
-);
+export const logout = () => dispatch => {
+  return SessionApiUtil.logout().then(user => dispatch(receiveCurrentUser(null)));
+};
 
-export const signup = user => dispatch => (
-  SessionApiUtil.signup(user).then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveUserErrors(errors.responseJSON)))
-);
+export const signup = user => dispatch => {
+  return SessionApiUtil.signup(user).then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveUserErrors(errors.responseJSON)));
+};

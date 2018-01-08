@@ -26,7 +26,7 @@ class ReviewIndexItem extends React.Component {
 
   handleDelete(e) {
     e.preventDefault();
-    this.props.deleteReview(this.props.review.id).then((errors) => this.props.clearErrors(errors));
+    this.props.deleteReview(this.props.review.id).then((errors) => this.props.clearReviewErrors(errors));
   }
 
   deleteReview() {
@@ -34,6 +34,19 @@ class ReviewIndexItem extends React.Component {
       return <button onClick={this.handleDelete}>Delete</button>
     }
   }
+
+  handleUpdate(e) {
+    e.preventDefault();
+    this.props.updateReview(this.props.review.id).then((errors) => this.props.clearReviewErrors(errors))
+  }
+
+  // updateReview() {
+  //   if ((this.props.currentUser.id === this.props.review.user_id) && this.state.updateReview) {
+  //     return (
+  //
+  //     )
+  //   }
+  // }
 
   update(property) {
     return e => this.setState({ [property]: e.currentTarget.value });

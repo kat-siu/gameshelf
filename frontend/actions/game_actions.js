@@ -17,10 +17,10 @@ export const receiveSingleGame = game => {
   };
 };
 
-export const fetchGames = () => dispatch => (
-  GameApiUtil.fetchGames().then(games => dispatch(receiveAllGames(games)))
-);
+export const fetchGames = () => dispatch => {
+  return GameApiUtil.fetchGames().then(games => dispatch(receiveAllGames(games)));
+};
 
-export const fetchGame = id => dispatch => (
-  GameApiUtil.fetchGame(id).then(game => dispatch(receiveSingleGame(game)))
-);
+export const fetchGame = id => dispatch => {
+  return GameApiUtil.fetchGame(id).then(game => dispatch(receiveSingleGame(game)));
+};

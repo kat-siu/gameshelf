@@ -3,25 +3,27 @@ import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
 const Auth = ({ component: Component, path, loggedIn }) => (
-  <Route path={path} render={(props) => (
-    loggedIn ? (
+  <Route path={path} render={(props) => {
+      debugger
+      return loggedIn ? (
       <Redirect to="/my_games" />
     ) : (
       <Component {...props} />
-    )
-  )} />
-);
-// ^if you're already logged in, you don't need to see this page
+    )}
+  } />
+)
+
 
 const Protected = ({ component: Component, path, loggedIn }) => (
-  <Route path={path} render={(props) => (
-     loggedIn ? (
-      <Component {...props} />
-    ) : (
-      <Redirect to="/" />
+  <Route path={path} render={(props) => {
+        debugger
+        return loggedIn ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to="/" />
         // where login container is located
-    )
-  )} />
+      )}
+    } /> 
 );
 
 const mapStateToProps = state => (

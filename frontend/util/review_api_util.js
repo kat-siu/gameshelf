@@ -21,6 +21,14 @@ export const createReview = review => {
   });
 };
 
+export const updateReview = review => {
+  return $.ajax({
+    url: `/api/reviews/${review.id}`,
+    method: 'post',
+    data: { review },
+  });
+};
+
 export const deleteReview = id => {
   return $.ajax({
     url: `/api/reviews/${id}`,

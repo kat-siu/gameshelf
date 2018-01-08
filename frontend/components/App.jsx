@@ -7,20 +7,21 @@ import GamesIndexContainer from './games/games_index_container';
 import GameShowContainer from './games/game_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-const App = () => (
-  <div>
-    <header>
-      <NavBarContainer />
-    </header>
-
-      <AuthRoute exact path="/" component={LoginFormContainer} />
-      <AuthRoute exact path="/" component={SignupFormContainer} />
+const App = () => {
+  return (
+    <div>
+      <header>
+        <NavBarContainer />
+      </header>
 
       <Switch>
-        <ProtectedRoute exact path="/games" component={GamesIndexContainer} />
-        <ProtectedRoute exact path="/games/:gameId" component={GameShowContainer} />
+        <ProtectedRoute path="/games/:gameId" component={GameShowContainer} />
+        <ProtectedRoute path="/games" component={GamesIndexContainer} />
+        <AuthRoute path="/" component={LoginFormContainer} />
+        <AuthRoute path="/" component={SignupFormContainer} />
       </Switch>
-  </div>
-);
+    </div>
+  )
+};
 
 export default App;

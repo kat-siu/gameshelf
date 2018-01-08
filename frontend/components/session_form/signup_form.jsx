@@ -15,12 +15,6 @@ class SignupForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/home');
-    }
-  }
-
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
