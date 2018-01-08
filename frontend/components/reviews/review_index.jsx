@@ -23,7 +23,7 @@ class ReviewIndex extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createReview({ rating: this.state.rating, body: this.state.body, game_id: this.props.gameId })
-    .then(() => this.setState({ rating: 5, body: "" }))
+    .then(() => this.setState({ rating: 5, body: "Your review has been submitted." }))
     .then(() => this.props.clearReviewErrors());
   }
   // .then(() => this.navigateToGameShow());

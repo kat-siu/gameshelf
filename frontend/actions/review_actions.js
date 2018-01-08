@@ -41,17 +41,17 @@ export const clearReviewErrors = () => {
 };
 
 export const fetchReviews = game_id => dispatch => {
-  ReviewApiUtil.fetchReviews(game_id).then(reviews => dispatch(receiveReviews(reviews)));
+  return ReviewApiUtil.fetchReviews(game_id).then(reviews => dispatch(receiveReviews(reviews)));
 };
 
 export const fetchReview = review => dispatch => {
-  ReviewApiUtil.fetchReview(review).then(review => dispatch(receiveReview(review)));
+  return ReviewApiUtil.fetchReview(review).then(review => dispatch(receiveReview(review)));
 };
 
 export const createReview = review => dispatch => {
-  ReviewApiUtil.createReview(review).then(review => dispatch(receiveReview(review)), errors => dispatch(receiveReviewErrors(errors.responseJSON)));
+  return ReviewApiUtil.createReview(review).then(review => dispatch(receiveReview(review)), errors => dispatch(receiveReviewErrors(errors.responseJSON)));
 };
 
 export const deleteReview = id => dispatch => {
-  ReviewApiUtil.deleteReview(id).then((review) => dispatch(removeReview(review)));
+  return ReviewApiUtil.deleteReview(id).then((review) => dispatch(removeReview(review)));
 };
