@@ -1,6 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import ReviewIndexItem from './review_index_item';
-import { clearReviewErrors } from '../../actions/review_actions';
 
 class ReviewIndex extends React.Component {
   constructor(props) {
@@ -22,21 +22,34 @@ class ReviewIndex extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createReview({
-      body: this.state.body,
-      game_id: this.props.gameId,
-    });
+    this.props.createReview({ rating: this.state.rating, body: this.state.body, game_id: this.props.gameId })
+    .then(() => this.setState({ rating: 5, body: "" }))
+    .then(() => this.props.clearReviewErrors())
+    .then(() => this.navigateToGameShow());
   }
+
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   const gameId = parseInt(this.props.match.params.gameId);
+  //   const review = Object.assign({}, this.state, { game_id: gameId });
+  //   this.props.createReview({ review });
+  //   this.navigateToGameShow();
+  // }
 
   componentDidMount() {
-    if (this.props.gameId) {
-      this.props.fetchReviews(this.props.match.params.gameId).then(() => this.props.clearErrors());
-    }
+    this.props.fetchReviews(this.props.match.params.gameId);
+    this.props.clearReviewErrors();
   }
 
-  // componentWillUnmount() {
-  //   this.props.clearReviewErrors();
-  // }
+  componentWillMount() {
+    this.props.fetchReviews(this.props.match.params.gameId);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.gameId !== nextProps.match.params.gameId) {
+      this.props.fetchReviews(nextProps.match.params.gameId);
+    }
+  }
 
   update(field) {
     return (e) => {this.setState({
@@ -57,66 +70,59 @@ class ReviewIndex extends React.Component {
    }
 
    renderReviewForm() {
-     debugger
-     return (
-       <div className="review-form">
-         <form onSubmit={this.handleSubmit}>
-           <label>Rating</label>
-           <br/>
-           <input
-             type="number"
-             value={this.state.rating}
-             onChange={this.update("rating")}
-           />
-           <br/>
-
-           <label>Review</label>
-           <br/>
-
-           <textarea
-             cols="30"
-             rows="10"
-             value={this.state.body}
-             placeholder="What did you think of this game?"
-             onChange={this.update("body")}
-           />
-           <br/>
-           <input type="submit" value="Add Review" />
-           <h3 className="errors">{this.props.errors}</h3>
-         </form>
-         <button onClick={this.navigateToGameShow}>Cancel</button>
-       </div>
-     )
+     if (this.props.currentUser) {
+       return (
+         <div>
+           <div className="review-header">Leave a Review</div>
+           <form onSubmit={this.handleSubmit} id="form" class="topBefore">
+  		        <input className="review-input" id="rating" type="number" placeholder="My Rating:" value={this.state.rating} onChange={this.update("rating")} />
+  		        <textarea className="review-textarea" required id="review" type="text" value={this.state.body} onChange={this.update("body")} placeholder="What did you think of this game?"></textarea>
+              <input className="review-input" id="submit" type="submit" value="SAVE" />
+            </form>
+          </div>
+       )
+       // return (
+       //   <div className="review-form">
+       //     <form onSubmit={this.handleSubmit}>
+       //       <label>My Rating: </label>
+       //       <input
+       //         type="number"
+       //         value={this.state.rating}
+       //         onChange={this.update("rating")}
+       //       />
+       //
+       //       <label className="review-input">What did you think?
+       //
+       //       <textarea required
+       //         value={this.state.body}
+       //         placeholder="Enter your review"
+       //         onChange={this.update("body")}
+       //       />
+       //      </label>
+       //      <input className="login-btn" type="submit" value="Save" />
+       //      <h3 className="errors">{this.props.errors}</h3>
+       //     </form>
+       //     <button className="login-btn" onClick={this.navigateToGameShow}>Cancel</button>
+       //   </div>
+       // )
+     }
    }
-  //
-  // render() {
-  //   debugger
-  //   reviews = this.props.game.review_ids.map(id => {
-  //   return (
-  //     <div>
-  //       <ul>
-  //         <ReviewIndexItem key={id} review={this.props.reviews[id]} />
-  //       </ul>
-  //     </div>
-  //   )
-  //   })
-  //
-  //   return (
-  //     <div>
-  //       <h2>Reviews</h2>
-  //       { reviews }
-  //     </div>
-  //   )
-  // }
 
   render() {
+    debugger
+    const { reviews, deleteReview, currentUser, updateReview, clearReviewErrors } = this.props;
     return (
       <div>
-        <h2>Reviews</h2>
-        { this.renderReviewForm() }
+        <ul>{ this.renderReviewForm() }</ul>
+        <div className="community-review-header">
+          <p>Community Reviews</p>
+        </div>
+        <div className="reviews">
+          <div>{ reviews.map(review => <ReviewIndexItem key={review.game_id} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} />)}</div>
+        </div>
       </div>
     )
   }
 }
 
-export default ReviewIndex;
+export default withRouter(ReviewIndex);

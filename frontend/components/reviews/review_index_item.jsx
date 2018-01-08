@@ -15,14 +15,23 @@ class ReviewIndexItem extends React.Component {
     this.deleteReview = this.deleteReview.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.review) {
+      this.setState({
+        rating: nextProps.review.rating,
+        body: nextProps.review.body,
+      });
+    }
+  }
+
   handleDelete(e) {
     e.preventDefault();
-    this.props.deleteReview(this.props.review.id).then(() => this.props.clearErrors());
+    this.props.deleteReview(this.props.review.id).then((errors) => this.props.clearErrors(errors));
   }
 
   deleteReview() {
     if (this.props.currentUser.id === this.props.review.user_id) {
-      return <link onClick={this.handleDelete}>Delete</link>
+      return <button onClick={this.handleDelete}>Delete</button>
     }
   }
 
@@ -31,13 +40,14 @@ class ReviewIndexItem extends React.Component {
   }
 
   renderReview() {
+    debugger
     const { review, deleteReview } = this.props;
     return (
       <ul>
         <li>{ review.rating }</li>
-        <li>{ review.name }</li>
+        <li>{ review.user_id.name }</li>
         <li>{ review.body }</li>
-        <li>{ this.renderDelete() }</li>
+        <li>{ this.deleteReview() }</li>
       </ul>
     )
   }

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchReviews, createReview, deleteReview, clearReviewErrors } from '../../actions/review_actions';
+import { fetchReviews, fetchReview, createReview, deleteReview, clearReviewErrors } from '../../actions/review_actions';
 import { fetchGame } from '../../actions/game_actions';
 import ReviewIndex from './review_index';
 
@@ -14,6 +14,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchReviews: game_id => dispatch(fetchReviews(game_id)),
+    fetchReview: review => dispatch(fetchReview(review)),
     createReview: review => dispatch(createReview(review)),
     deleteReview: id => dispatch(deleteReview(id)),
     clearReviewErrors: errors => dispatch(clearReviewErrors(errors)),

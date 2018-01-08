@@ -13,7 +13,7 @@ export const receiveReviews = reviews => {
   };
 };
 
-export const receiveReview = reviews => {
+export const receiveReview = review => {
   return {
     type: RECEIVE_SINGLE_REVIEW,
     review
@@ -40,8 +40,12 @@ export const clearReviewErrors = () => {
   };
 };
 
-export const fetchReviews = (game_id) => dispatch => {
+export const fetchReviews = game_id => dispatch => {
   ReviewApiUtil.fetchReviews(game_id).then(reviews => dispatch(receiveReviews(reviews)));
+};
+
+export const fetchReview = review => dispatch => {
+  ReviewApiUtil.fetchReview(review).then(review => dispatch(receiveReview(review)));
 };
 
 export const createReview = review => dispatch => {

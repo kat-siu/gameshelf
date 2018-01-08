@@ -17,27 +17,31 @@ nav {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  width: 80%;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 
   .nav-link, .nav-welcome {
-    margin-top: 7px;
+    padding: 10px;
   }
 
   .nav-link {
     color: black;
-    padding: 0 15px;
+    padding: 10px;
     text-decoration: none;
 
-    &:hover {
-      font-color: white;
+    a:hover {
+      color: white;
       background: black;
+      border-radius: 5px;
+      padding: 10px;
     }
   }
 
   .nav-welcome, .nav-logout {
     align-content: flex-end;
   }
-  
+
   .logout-btn {
     border-radius: 3px;
     background-color: #382110;

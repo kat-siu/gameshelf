@@ -1,3 +1,171 @@
-// Place all the styles related to the api/reviews controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.review-input::-webkit-input-placeholder, .review-textarea::-webkit-input-placeholder {
+  color: #black;
+  font-size: 0.875em;
+}
+
+.review-input:focus::-webkit-input-placeholder, .review-textarea:focus::-webkit-input-placeholder {
+  color: #black;
+}
+
+.review-input::-moz-placeholder, .review-textarea::-moz-placeholder {
+  color: #black;
+  font-size: 0.875em;
+}
+
+.review-input:focus::-moz-placeholder, .review-textarea:focus::-moz-placeholder {
+  color: #black;
+}
+
+.review-input::placeholder, .review-textarea::placeholder {
+  color: #black;
+  font-size: 0.875em;
+}
+
+.review-input:focus::placeholder, .review-textarea::focus:placeholder {
+  color: #black;
+}
+
+.review-input::-ms-placeholder, .review-textarea::-ms-placeholder {
+  color: #black;
+  font-size: 0.875em;
+}
+
+.review-input:focus::-ms-placeholder, .review-textarea:focus::-ms-placeholder {
+  color: #black;
+}
+
+/* on hover placeholder */
+
+.review-input:hover::-webkit-input-placeholder, .review-textarea:hover::-webkit-input-placeholder {
+  color: black;
+  font-size: 0.875em;
+}
+
+.review-input:hover:focus::-webkit-input-placeholder, .review-textarea:hover:focus::-webkit-input-placeholder {
+  color: black;
+}
+
+.review-input:hover::-moz-placeholder, .review-textarea:hover::-moz-placeholder {
+  color: black;
+  font-size: 0.875em;
+}
+
+.review-input:hover:focus::-moz-placeholder, .review-textarea:hover:focus::-moz-placeholder {
+  color: black;
+}
+
+.review-input:hover::placeholder, .review-textarea:hover::placeholder {
+  color: black;
+  font-size: 0.875em;
+}
+
+.review-input:hover:focus::placeholder, .review-textarea:hover:focus::placeholder {
+  color: black;
+}
+
+.review-input:hover::placeholder, .review-textarea:hover::placeholder {
+  color: black;
+  font-size: 0.875em;
+}
+
+.review-input:hover:focus::-ms-placeholder, .review-textarea:hover::focus:-ms-placeholder {
+  color: black;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.review-header {
+  position: relative;
+  font-size: 2em;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 30px auto 40px auto;
+}
+
+.review-input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+
+  background: transparent;
+  outline: none;
+  color: #726659;
+
+  border: solid 1px #b9deee;
+  border-bottom: none;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.review-input:hover {
+  background: #b9deee;
+  color: black;
+}
+
+.review-textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+
+  background: transparent;
+  outline: none;
+
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+
+  border: solid 1px #b9deee;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.review-textarea:hover {
+  background: #b9deee;
+  color: black;
+}
+
+#submit {
+  width: 502px;
+
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b9deee;
+
+  outline:none;
+  cursor: pointer;
+
+  border: solid 1px #b9deee;
+  border-top: none;
+}
+
+#submit:hover {
+  color: black;
+}
+
+.community-review-header {
+  position: relative;
+  font-size: 2em;
+  text-align: center;
+  letter-spacing: 4px;
+  border-top: solid 1px #b9deee;
+}

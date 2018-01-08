@@ -82,10 +82,42 @@
 }
 
 .game-show-box {
-  width: 100%;
   overflow: hidden;
   margin: 10px;
-  width: 1300px;
-  float: right;
+  width: 50%;
   margin-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  .game-index-link {
+    margin-bottom: 20px;
+  }
+
+  .game-details {
+    display: flex;
+    border-bottom: 1px solid #b9deee;
+    padding-bottom: 30px;
+  }
+
+  .game-title {
+    position: relative;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+
+  .right-side-show {
+    margin-left: 40px;
+  }
+
+  .game-cover-img {
+    width: 300px;
+    box-shadow: 10px 10px 5px #ccc;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
 }

@@ -6,12 +6,18 @@ class Api::ReviewsController < ApplicationController
     render :index
   end
 
+  def index
+    @reviews = Review.includes(:user).where(game_id: params[:game_id])
+    render :index
+  end
+
   def show
     @review = Review.find(params[:id])
   end
 
   def create
     @review = Review.new(review_params)
+    @review.user_id = current_user.id
 
     if @review.save
       render :show

@@ -1,5 +1,5 @@
 import { RECEIVE_ALL_REVIEWS, RECEIVE_SINGLE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
-import merge from 'lodash/merge';
+import { merge } from 'lodash';
 
 const ReviewsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -9,9 +9,12 @@ const ReviewsReducer = (state = {}, action) => {
     case RECEIVE_ALL_REVIEWS:
       return action.reviews;
     case RECEIVE_SINGLE_REVIEW:
-      return merge({}, state, { [action.review.id]: action.review })
+      // return merge({}, state, { [action.review.id]: action.review });
+      const review = action.review;
+      newState[review.game_id].reviews.push(review);
+      return newState;
     case REMOVE_REVIEW:
-      const newState = merge({}, state);
+      newState = merge({}, state);
       delete newState[action.review.id];
       return newState;
     default:
