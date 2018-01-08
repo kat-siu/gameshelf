@@ -24,9 +24,9 @@ class ReviewIndex extends React.Component {
     e.preventDefault();
     this.props.createReview({ rating: this.state.rating, body: this.state.body, game_id: this.props.gameId })
     .then(() => this.setState({ rating: 5, body: "" }))
-    .then(() => this.props.clearReviewErrors())
-    .then(() => this.navigateToGameShow());
+    .then(() => this.props.clearReviewErrors());
   }
+  // .then(() => this.navigateToGameShow());
 
   // handleSubmit(e) {
   //   e.preventDefault();
@@ -45,11 +45,11 @@ class ReviewIndex extends React.Component {
     this.props.fetchReviews(this.props.match.params.gameId);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.gameId !== nextProps.match.params.gameId) {
-      this.props.fetchReviews(nextProps.match.params.gameId);
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (this.props.match.params.gameId !== nextProps.match.params.gameId) {
+  //     this.props.fetchReviews(nextProps.match.params.gameId);
+  //   }
+  // }
 
   update(field) {
     return (e) => {this.setState({
@@ -74,10 +74,28 @@ class ReviewIndex extends React.Component {
        return (
          <div>
            <div className="review-header">Leave a Review</div>
-           <form onSubmit={this.handleSubmit} id="form" class="topBefore">
-  		        <input className="review-input" id="rating" type="number" placeholder="My Rating:" value={this.state.rating} onChange={this.update("rating")} />
-  		        <textarea className="review-textarea" required id="review" type="text" value={this.state.body} onChange={this.update("body")} placeholder="What did you think of this game?"></textarea>
-              <input className="review-input" id="submit" type="submit" value="SAVE" />
+           <form onSubmit={this.handleSubmit} id="form" className="topBefore">
+  		        <input className="review-input"
+                id="rating"
+                type="number"
+                placeholder="My Rating:"
+                value={this.state.rating}
+                onChange={this.update("rating")}
+              />
+            <textarea required
+              className="review-textarea"
+              id="review"
+              type="text"
+              value={this.state.body}
+              onChange={this.update("body")}
+              placeholder="What did you think of this game?">
+            </textarea>
+              <input className="review-input"
+                id="submit"
+                type="submit"
+                value="SAVE"
+              />
+            <p>{this.props.errors}</p>
             </form>
           </div>
        )
@@ -118,7 +136,7 @@ class ReviewIndex extends React.Component {
           <p>Community Reviews</p>
         </div>
         <div className="reviews">
-          <div>{ reviews.map(review => <ReviewIndexItem key={review.game_id} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} />)}</div>
+          <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.gameId} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} />)}</div>
         </div>
       </div>
     )

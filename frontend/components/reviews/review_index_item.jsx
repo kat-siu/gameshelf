@@ -40,20 +40,20 @@ class ReviewIndexItem extends React.Component {
   }
 
   renderReview() {
-    debugger
     const { review, deleteReview } = this.props;
     return (
-      <ul>
-        <li>{ review.rating }</li>
-        <li>{ review.user_id.name }</li>
+      <ul className="review-details">
+        <li>Rating: { review.rating }</li>
+        <li>{ review.name }</li>
         <li>{ review.body }</li>
+        <li>{ review.created_at }</li>
         <li>{ this.deleteReview() }</li>
+        <br /> <br />
       </ul>
     )
   }
 
   render() {
-    debugger
     return (
       <li>{ this.renderReview() }</li>
     )

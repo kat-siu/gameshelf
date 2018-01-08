@@ -1,12 +1,12 @@
 nav {
   border-bottom: 2px solid #472614;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
-  background: #00afcc;
-
+  background: #b9deee;
+  z-index: 1;
 }
 
 .logo-img {

@@ -9,10 +9,10 @@ const ReviewsReducer = (state = {}, action) => {
     case RECEIVE_ALL_REVIEWS:
       return action.reviews;
     case RECEIVE_SINGLE_REVIEW:
-      // return merge({}, state, { [action.review.id]: action.review });
-      const review = action.review;
-      newState[review.game_id].reviews.push(review);
-      return newState;
+      return merge({}, state, { [action.review.id]: action.review });
+      // const review = action.review;
+      // newState[review.game_id].reviews.push(review);
+      // return newState;
     case REMOVE_REVIEW:
       newState = merge({}, state);
       delete newState[action.review.id];
