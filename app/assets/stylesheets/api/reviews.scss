@@ -86,7 +86,7 @@ body {
 #form {
   position: relative;
   width: 500px;
-  margin: 30px auto 40px auto;
+  margin: 30px auto 75px auto;
 }
 
 .review-input {
@@ -191,3 +191,45 @@ body {
   margin: 20px;
   padding: 10px 10px 0px 10px;
 }
+
+
+//
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.review-input {
+  float: left;
+}
+
+.review-input > input { display: none; }
+.review-input > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+
+.review-input > label {
+  color: #ddd;
+  float: right;
+}
+
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.review-input > input:checked ~ label, /* show gold star when clicked */
+.review-input:not(:checked) > label:hover, /* hover current star */
+.review-input:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.review-input > input:checked + label:hover, /* hover current star when changing review-input */
+.review-input > input:checked ~ label:hover,
+.review-input > label:hover ~ input:checked ~ label, /* lighten current selection */
+.review-input > input:checked ~ label:hover ~ label { color: #FFED85;  }

@@ -8,5 +8,8 @@ class CreateReviews < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    add_index :reviews, :user_id
+    add_index :reviews, :game_id
   end
 end
