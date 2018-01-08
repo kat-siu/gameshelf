@@ -56,10 +56,9 @@ class ReviewIndexItem extends React.Component {
     const { review, deleteReview } = this.props;
     return (
       <ul className="review-details">
-        <li>Rating: { review.rating }</li>
-        <li>{ review.name }</li>
-        <li>{ review.body }</li>
         <li>{ review.created_at }</li>
+        <li>{ review.name } rated it { review.rating }</li>
+        <li>{ review.body }</li>
         <li>{ this.deleteReview() }</li>
         <br /> <br />
       </ul>
