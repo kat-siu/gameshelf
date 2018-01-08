@@ -8,5 +8,6 @@ const ErrorsReducer = combineReducers({
   login: LoginErrorsReducer,
   review: ReviewErrorsReducer,
 });
+// gameshelf: GameshelfErrorsReducer,
 
 export default ErrorsReducer;
