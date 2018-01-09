@@ -15,7 +15,6 @@ const mapDispatchToProps = dispatch => {
     fetchGameshelves: userId => dispatch(fetchGameshelves(userId)),
     fetchGameshelf: gameshelf => dispatch(fetchGameshelf(gameshelf)),
     createGameshelf: gameshelf => dispatch(createGameshelf(gameshelf)),
-    updateGameshelf: gameshelf => dispatch(updateGameshelf(gameshelf)),
     deleteGameshelf: id => dispatch(deleteGameshelf(id)),
     clearGameshelfErrors: () => dispatch(clearGameshelfErrors()),
   };

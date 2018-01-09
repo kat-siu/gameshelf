@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108171147) do
+ActiveRecord::Schema.define(version: 20180109150454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20180108171147) do
     t.string "cover_img_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "gameshelf_memberships", force: :cascade do |t|
+    t.integer "gameshelf_id", null: false
+    t.integer "game_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_gameshelf_memberships_on_game_id"
+    t.index ["gameshelf_id"], name: "index_gameshelf_memberships_on_gameshelf_id"
   end
 
   create_table "gameshelves", force: :cascade do |t|

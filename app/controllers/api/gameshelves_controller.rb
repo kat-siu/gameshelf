@@ -21,8 +21,11 @@ class Api::GameshelvesController < ApplicationController
 
   def destroy
     @gameshelf = Gameshelf.find(params[:id])
-    @gameshelf.destroy!
-    render :show
+    if @gameshelf.destroy!
+      render :show
+    else
+      render json: @gameshelf.errors.full_messages, status: 422
+    end
   end
 
   private

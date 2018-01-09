@@ -20,6 +20,7 @@ class User < ApplicationRecord
 
   has_many :reviews
   has_many :gameshelves
+  has_many :games, through: :gameshelves
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

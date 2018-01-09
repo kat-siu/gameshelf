@@ -85,7 +85,6 @@ class ReviewIndex extends React.Component {
    }
 
   render() {
-    debugger
     const { reviews, deleteReview, currentUser, updateReview, clearReviewErrors } = this.props;
     return (
       <div className="review-form-and-reviews">

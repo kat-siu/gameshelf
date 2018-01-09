@@ -13,4 +13,6 @@ class Gameshelf < ApplicationRecord
   validates :user_id, :title, presence: true
 
   belongs_to :user
+  has_many :gameshelf_memberships
+  has_many :games, through: :gameshelf_memberships
 end
