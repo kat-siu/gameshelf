@@ -22,9 +22,9 @@ class GameShow extends React.Component {
     } else {
     return (
         <div className="game-show-box">
-          <div className="game-index-link"><Link to="/games">&lt;&lt; Back to all games</Link></div>
             <div className="game-details">
               <div className="left-side-show">
+                <div className="game-index-link"><Link to="/games">&lt;&lt; Back to all games</Link></div>
                 <img className="game-cover-img" src={`${this.props.game.cover_img_url}`} />
               </div>
               <div className="right-side-show">
@@ -40,9 +40,9 @@ class GameShow extends React.Component {
                 </div>
               </div>
             </div>
-          <div className="review-form">
-            <ReviewIndexContainer gameId={this.props.game.id} />
-          </div>
+
+            <ReviewIndexContainer className="review-form" gameId={this.props.game.id} />
+
         </div>
       )
     }

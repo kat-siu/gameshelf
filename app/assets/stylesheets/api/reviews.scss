@@ -79,7 +79,6 @@ body {
 .review-header {
   position: relative;
   font-size: 2em;
-  text-align: center;
   letter-spacing: 4px;
 }
 
@@ -87,6 +86,17 @@ body {
   position: relative;
   width: 500px;
   margin: 30px auto 75px auto;
+}
+
+.review-form-and-reviews {
+  margin-left: 335px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-box {
+  flex-direction: column;
+  float: left;
 }
 
 .review-input {
@@ -165,17 +175,15 @@ body {
 .community-review-header {
   position: relative;
   font-size: 2em;
-  text-align: center;
   letter-spacing: 4px;
-  border-top: solid 1px #b9deee;
+  margin-left: 35px;
 }
 
 .reviews {
   border: 1px solid #b9deee;
   list-style: none;
-  margin-right: auto;
-  margin-left: auto;
-  width: 80%;
+  width: 500px;
+  margin-left: 35px;
 }
 
 .review-details {
@@ -185,6 +193,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0px auto;
+}
+
+.community-reviews {
+  border-top: 1px solid #b9deee;
 }
 
 .review {

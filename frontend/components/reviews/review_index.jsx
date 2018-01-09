@@ -48,7 +48,7 @@ class ReviewIndex extends React.Component {
  renderReviewForm() {
    if (this.props.currentUser) {
      return (
-       <div>
+       <div className="review-box">
          <div className="review-header">Leave a Review</div>
          <form onSubmit={this.handleSubmit} id="form" className="topBefore">
            <fieldset className="review-input">
@@ -70,11 +70,13 @@ class ReviewIndex extends React.Component {
            onChange={this.update("body")}
            placeholder="What did you think of this game?">
          </textarea>
-           <input className="review-input"
-             id="submit"
-             type="submit"
-             value="SAVE"
-           />
+
+         <input className="review-input"
+           id="submit"
+           type="submit"
+           value="SAVE"
+         />
+
          <p>{this.props.errors}</p>
          </form>
        </div>
@@ -86,13 +88,15 @@ class ReviewIndex extends React.Component {
     debugger
     const { reviews, deleteReview, currentUser, updateReview, clearReviewErrors } = this.props;
     return (
-      <div>
+      <div className="review-form-and-reviews">
         <ul>{ this.renderReviewForm() }</ul>
-        <div className="community-review-header">
-          <p>Community Reviews</p>
-        </div>
-        <div className="reviews">
-          <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.gameId} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} />)}</div>
+        <div className="community-reviews">
+          <div className="community-review-header">
+            <p>Community Reviews</p>
+          </div>
+          <div className="reviews">
+            <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.gameId} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} />)}</div>
+          </div>
         </div>
       </div>
     )

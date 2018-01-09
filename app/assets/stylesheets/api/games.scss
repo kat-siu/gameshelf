@@ -96,8 +96,7 @@
 
   .game-details {
     display: flex;
-    border-bottom: 1px solid #b9deee;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
 
   .game-title {
@@ -108,7 +107,13 @@
   }
 
   .right-side-show {
-    margin-left: 40px;
+    border-bottom: 1px solid #b9deee;
+    margin-left: 335px;
+    padding: 30px;
+  }
+
+  .left-side-show {
+    position: fixed;
   }
 
   .game-cover-img {
