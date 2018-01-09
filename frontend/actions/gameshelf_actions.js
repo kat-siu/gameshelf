@@ -40,8 +40,8 @@ export const clearGameshelfErrors = () => {
   };
 };
 
-export const fetchGameshelves = user_id => dispatch => {
-  return GameshelfApiUtil.fetchGameshelves(user_id).then(gameshelves => dispatch(receiveGameshelves(gameshelves)));
+export const fetchGameshelves = userId => dispatch => {
+  return GameshelfApiUtil.fetchGameshelves(userId).then(gameshelves => dispatch(receiveGameshelves(gameshelves)));
 };
 
 export const fetchGameshelf = gameshelf => dispatch => {
