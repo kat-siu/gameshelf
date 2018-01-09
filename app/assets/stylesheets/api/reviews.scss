@@ -193,6 +193,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0px auto;
+  line-height: 1.5;
 }
 
 .community-reviews {
@@ -204,12 +205,16 @@ body {
   padding: 10px 10px 0px 10px;
 }
 
+.rating-form-title {
+  margin-top: 16px;
+}
+
 
 //
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
-fieldset, label { margin: 0; padding: 0; }
+fieldset, label { margin: 0; padding: 0; margin-top: -20px;}
 body{ margin: 20px; }
 h1 { font-size: 1.5em; margin: 10px; }
 
@@ -239,7 +244,8 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 .review-input > input:checked ~ label, /* show gold star when clicked */
 .review-input:not(:checked) > label:hover, /* hover current star */
-.review-input:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.review-input:not(:checked) > label:hover ~ label { color: #E9E91B
+;  } /* hover previous stars in list */
 
 .review-input > input:checked + label:hover, /* hover current star when changing review-input */
 .review-input > input:checked ~ label:hover,

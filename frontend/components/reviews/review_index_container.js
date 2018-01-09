@@ -5,7 +5,7 @@ import ReviewIndex from './review_index';
 
 const mapStateToProps = (state) => {
   return {
-    reviews: Object.keys(state.reviews).map(id => state.reviews[id]),
+    reviews: Object.values(state.entities.reviews),
     currentUser: state.session.currentUser,
     errors: state.errors.review || [],
   };

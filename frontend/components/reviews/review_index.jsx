@@ -95,7 +95,7 @@ class ReviewIndex extends React.Component {
             <p>Community Reviews</p>
           </div>
           <div className="reviews">
-            <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.gameId} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} />)}</div>
+            <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} />)}</div>
           </div>
         </div>
       </div>
