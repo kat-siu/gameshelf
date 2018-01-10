@@ -1,7 +1,8 @@
-export const fetchGameshelves = userId => {
+export const fetchGameshelves = user => {
     return $.ajax({
-    url: `/api/users/${userId}`,
+    url: '/api/gameshelves',
     method: 'get',
+    data: user,
   });
 };
 
@@ -28,9 +29,9 @@ export const updateGameshelf = gameshelf => {
   });
 };
 
-export const deleteGameshelf = id => {
+export const deleteGameshelf = gameshelf => {
   return $.ajax({
-    url: `/api/gameshelves/${id}`,
+    url: `/api/gameshelves/${gameshelf.id}`,
     method: 'delete'
   });
 };

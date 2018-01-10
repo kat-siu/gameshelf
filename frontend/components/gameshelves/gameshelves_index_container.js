@@ -4,15 +4,15 @@ import GameshelvesIndex from './gameshelves_index';
 
 const mapStateToProps = state => {
   return {
-    gameshelves: Object.keys(state.entities.gameshelves).map(id => state.entities.gameshelves[id]),
+    gameshelves: Object.values(state.entities.gameshelves),
     currentUser: state.session.currentUser,
-    errors: state.errors.review || [],
+    errors: state.errors.gameshelf || [],
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchGameshelves: userId => dispatch(fetchGameshelves(userId)),
+    fetchGameshelves: (user) => dispatch(fetchGameshelves(user)),
     fetchGameshelf: gameshelf => dispatch(fetchGameshelf(gameshelf)),
     createGameshelf: gameshelf => dispatch(createGameshelf(gameshelf)),
     deleteGameshelf: id => dispatch(deleteGameshelf(id)),

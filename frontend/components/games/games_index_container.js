@@ -4,13 +4,13 @@ import GamesIndex from './games_index';
 
 const mapStateToProps = state => {
   return {
-    games: Object.keys(state.entities.games).map(id => state.entities.games[id])
+    games: Object.keys(state.entities.games).map(id => state.entities.games[id]),
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchGames: () => dispatch(fetchGames())
+    fetchGames: () => dispatch(fetchGames()),
   };
 };
 

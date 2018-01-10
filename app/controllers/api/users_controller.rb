@@ -3,6 +3,9 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      Gameshelf.create!(title: 'Played', user_id: @user.id, permanent_shelf: true)
+      Gameshelf.create!(title: 'Currently Playing', user_id: @user.id, permanent_shelf: true)
+      Gameshelf.create!(title: 'Want to Play', user_id: @user.id, permanent_shelf: true)
       login(@user)
       render :show
     else

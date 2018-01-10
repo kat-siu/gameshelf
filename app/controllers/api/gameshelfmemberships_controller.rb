@@ -1,9 +1,10 @@
-class Api::GameshelfmembershipsController < ApplicationController
+class Api::GameshelfMembershipsController < ApplicationController
   def create
     @gameshelf_membership = GameshelfMembership.new(gameshelf_membership_params)
 
     if @gameshelf_membership.save
-
+      @gameshelf = @gameshelf_membership.shelf
+      render 'api/gameshelves/show'
     else
       render json: @gameshelf_membership.errors.full_messages, status: 422
     end
@@ -12,7 +13,8 @@ class Api::GameshelfmembershipsController < ApplicationController
   def destroy
     @gameshelf_membership = GameshelfMembership.find(params[:id])
     @gameshelf_membership.destroy!
-    render json: ['Your gameshelf ownership has been removed.'], status: 202
+    @gameshelf = Gameshelf.find(@gameshelf_membership.gameshelf_id)
+    render 'api/gameshelves/show'
   end
 
   private

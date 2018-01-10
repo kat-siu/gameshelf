@@ -2,6 +2,7 @@ import { RECEIVE_GAMESHELF_ERRORS, CLEAR_GAMESHELF_ERRORS } from '../actions/gam
 
 const GameshelfErrorsReducer = (state = [], action) => {
   Object.freeze(state);
+
   switch (action.type) {
     case RECEIVE_GAMESHELF_ERRORS:
       return action.errors;

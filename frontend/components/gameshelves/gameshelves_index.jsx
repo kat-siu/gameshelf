@@ -1,5 +1,6 @@
 import React from 'react';
 import GameshelvesIndexItem from './gameshelves_index_item';
+import { createGameshelf } from '../../actions/gameshelf_actions';
 
 class GameshelvesIndex extends React.Component {
   constructor(props) {
@@ -7,14 +8,15 @@ class GameshelvesIndex extends React.Component {
 
     this.state = {
       title: "",
+      user_id: this.props.currentUser.id
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchGameshelves()
-    .then(errors => this.props.clearGameshelfErrors(errors));
+    this.props.fetchGameshelves(this.props.currentUser)
+    .then(() => this.props.clearGameshelfErrors());
   }
 
   handleSubmit(e) {
@@ -42,41 +44,36 @@ class GameshelvesIndex extends React.Component {
     );
   }
 
-  renderGameshelf() {
-    const { gameshelves, createGameshelf, deleteGameshelf, currentUser, updateReview, clearGameshelfErrors } = this.props;
+  render() {
+    debugger
     if (this.props.currentUser) {
-      return (
-        <div>
-          <div>Gameshelves:</div>
-          <form onSubmit={this.handleSubmit}>
-            <input required
-              type="text"
-              value={this.state.title}
-              onChange={this.update("title")}>
-            </input>
+      const { gameshelves, deleteGameshelf, currentUser, updateReview } = this.props;
+        return (
+          <div className="gameshelf-organizer">
+            <div>Gameshelves:</div>
 
-            <input
-              type="submit"
-              value="Add shelf"
-            />
-          <p>{this.props.errors}</p>
+            <ul>
+              { gameshelves.map(gameshelf => <GameshelvesIndexItem className="individual-gameshelves" key={gameshelf.id} gameshelf={gameshelf} createGameshelf={createGameshelf} deleteGameshelf={deleteGameshelf} />)}
+            </ul>
+
+            <form onSubmit={this.handleSubmit}>
+              <input required
+                type="text"
+                value={this.state.title}
+                onChange={this.update("title")}
+                placeholder="Title" />
+
+              <input
+                type="submit"
+                value="Add shelf"
+              />
+
+            <p>{this.props.errors}</p>
+
           </form>
-
-          <ul>
-            { gameshelves.map(gameshelf => <GameshelfIndexItem className="individual-gameshelves" key={gameshelf.id} gameshelf={gameshelf} createGameshelf={createGameshelf} deleteGameshelf={deleteGameshelf} currentUser={currentUser} clearGameshelfErrors={clearGameshelfErrors} />)}
-          </ul>
         </div>
       )
     }
-  }
-  // <ul>{this.props.gameshelves}</ul>
-
-  render() {
-    return (
-      <div>
-        { this.renderGameshelf() }
-      </div>
-    )
   }
 }
 
