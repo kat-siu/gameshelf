@@ -1,6 +1,14 @@
 // Place all the styles related to the api/gameshelves controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.gameshelf-organizer {
-  margin-top: 100px;
+.gameshelf-box {
+  margin-top: 127px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 12px;
+  border: 1px solid #b9deee;
+  margin-left: 100px;
+  margin-left: 15px;
+  width: 15%;
 }

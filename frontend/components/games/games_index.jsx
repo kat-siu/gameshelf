@@ -1,5 +1,6 @@
 import React from 'react';
 import GamesIndexItem from './games_index_item';
+import GameshelvesIndexContainer from '../gameshelves/gameshelves_index_container';
 
 class GamesIndex extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class GamesIndex extends React.Component {
 
     return (
       <div>
+        <section className="gameshelf-box game-index"><GameshelvesIndexContainer /></section>
         <div id="wrap">
           <h2>All Games:</h2>
           { games }

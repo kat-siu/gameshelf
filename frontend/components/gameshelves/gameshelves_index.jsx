@@ -49,7 +49,7 @@ class GameshelvesIndex extends React.Component {
     if (this.props.currentUser) {
       const { gameshelves, deleteGameshelf, currentUser, updateReview } = this.props;
         return (
-          <div className="gameshelf-organizer">
+          <div className="gameshelf-box">
             <div>Gameshelves:</div>
 
             <ul>

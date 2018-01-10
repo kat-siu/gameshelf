@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import { fetchGames } from '../../actions/game_actions';
 import { fetchReviews } from '../../actions/review_actions';
+import GameshelvesIndexContainer from '../gameshelves/gameshelves_index_container';
 
 
 class GameShow extends React.Component {
@@ -26,6 +27,7 @@ class GameShow extends React.Component {
               <div className="left-side-show">
                 <div className="game-index-link"><Link to="/games">&lt;&lt; Back to all games</Link></div>
                 <img className="game-cover-img" src={`${this.props.game.cover_img_url}`} />
+                <GameshelvesIndexContainer />
               </div>
               <div className="right-side-show">
                 <div className="game-title">{this.props.game.title} ({this.props.game.year})</div>

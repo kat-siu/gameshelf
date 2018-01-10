@@ -19,7 +19,7 @@ class navBar extends React.Component {
         <nav>
           <ul className="nav-items">
             <li>
-              <Link to='/'>
+              <Link to='/my_games'>
                 <img className='logo-img' src="https://s3.us-east-2.amazonaws.com/gameshelf/logo.png" />
               </Link>
             </li>
