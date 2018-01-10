@@ -22,7 +22,7 @@ class GameshelvesIndexItem extends React.Component {
           { this.props.gameshelf.title } ({ this.props.gameshelf.games.length })
         </Link>
         <button onClick={this.handleDelete}>
-        <i class="icon-fixed-width icon-trash"></i>
+        <i className="icon-fixed-width icon-trash"></i>
         </button>
       </ul>
     )
@@ -30,4 +30,4 @@ class GameshelvesIndexItem extends React.Component {
 
 }
 
-export default withRouter(GameshelvesIndexItem);
+export default GameshelvesIndexItem;

@@ -55,11 +55,11 @@ class ReviewIndex extends React.Component {
              <div className="rating-form-title">
                My Rating:
              </div>
-             <input type="radio" id="star5" name="rating" value="5" onChange={this.update("rating")} /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-             <input type="radio" id="star4" name="rating" value="4" onChange={this.update("rating")} /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-             <input type="radio" id="star3" name="rating" value="3" onChange={this.update("rating")} /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-             <input type="radio" id="star2" name="rating" value="2" onChange={this.update("rating")} /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-             <input type="radio" id="star1" name="rating" value="1" onChange={this.update("rating")} /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+             <input type="radio" id="star5" name="rating" value="5" onChange={this.update("rating")} /><label className = "full" for="star5" title="Awesome - 5 stars"></label>
+             <input type="radio" id="star4" name="rating" value="4" onChange={this.update("rating")} /><label className = "full" for="star4" title="Pretty good - 4 stars"></label>
+             <input type="radio" id="star3" name="rating" value="3" onChange={this.update("rating")} /><label className = "full" for="star3" title="Meh - 3 stars"></label>
+             <input type="radio" id="star2" name="rating" value="2" onChange={this.update("rating")} /><label className = "full" for="star2" title="Kinda bad - 2 stars"></label>
+             <input type="radio" id="star1" name="rating" value="1" onChange={this.update("rating")} /><label className = "full" for="star1" title="Sucks big time - 1 star"></label>
            </fieldset>
 
          <textarea required

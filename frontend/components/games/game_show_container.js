@@ -12,15 +12,16 @@ const mapStateToProps = (state, ownProps) => {
     gameshelf: state.entities.gameshelves[ownProps.match.params.gameshelfId],
   };
 };
+// gameshelf: Object.values(state.entities.gameshelves),
 
 const mapDispatchToProps = dispatch => {
   return {
     fetchGame: (id) => dispatch(fetchGame(id)),
     fetchReviews: gameId => dispatch(fetchReviews(gameId)),
-    fetchGameshelves: () => dispatch(fetchGameshelves()),
-    createGameshelfMembership: gameshelf_membership => dispatch(createGameshelfMembership(gameshelf_membership)),
-    deleteGameshelfMembership: gameshelf_membership => dispatch(deleteGameshelfMembership(gameshelf_membership)),
+    fetchGameshelves: user => dispatch(fetchGameshelves(user)),
   };
 };
+// createGameshelfMembership: gameshelf_membership => dispatch(createGameshelfMembership(gameshelf_membership)),
+// deleteGameshelfMembership: gameshelf_membership => dispatch(deleteGameshelfMembership(gameshelf_membership)),
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameShow);

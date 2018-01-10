@@ -8,7 +8,7 @@ class Api::GameshelvesController < ApplicationController
   end
 
   def create
-    @gameshelf = Gameshelf.new(user_id: current_user.id, title: gameshelf_params['title'])
+    @gameshelf = Gameshelf.new(gameshelf_params)
 
     if @gameshelf.save
       render :show
@@ -27,7 +27,6 @@ class Api::GameshelvesController < ApplicationController
   end
 
   def destroy
-    # debugger
     @gameshelf = Gameshelf.find(params[:id])
     if @gameshelf.destroy!
       render :show

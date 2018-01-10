@@ -10,6 +10,7 @@ User.destroy_all
 Game.destroy_all
 Review.destroy_all
 Gameshelf.destroy_all
+GameshelfMembership.destroy_all
 
 guest = User.create!(name: 'Guest', username:"guest@gmail.com", password:"password")
 kat = User.create!(name: 'Kat', username:"k.siu92@gmail.com", password:"password")

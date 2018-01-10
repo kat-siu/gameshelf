@@ -16,6 +16,6 @@ class Game < ApplicationRecord
   validates :title, :year, :description, :platform, :cover_img_url, presence: true
 
   has_many :reviews
-  has_many :gameshelf_membeships
+  has_many :gameshelf_memberships
   has_many :gameshelves, through: :gameshelf_memberships
 end
