@@ -31,7 +31,7 @@ class ReviewIndexItem extends React.Component {
 
   deleteReview() {
     if (this.props.currentUser.id === this.props.review.user_id) {
-      return <button onClick={this.handleDelete}>Delete</button>
+      return <button className="review-delete-btn" onClick={this.handleDelete}>Delete</button>
     }
   }
 
@@ -56,11 +56,10 @@ class ReviewIndexItem extends React.Component {
     const { review, deleteReview } = this.props;
     return (
       <ul className="review-details">
-        <li>{ review.created_at }</li>
-        <li>{ review.name } rated it { review.rating }/5</li>
-        <li>{ review.body }</li>
+        <li><font color="#00afcc" weight="bold">{ review.name }</font> rated it { review.rating }/5</li>
+        <li>{ review.created_at.slice(0, 10) }</li><br /><br />
+        <li><font face="Times New Roman">{ review.body }</font></li>
         <li>{ this.deleteReview() }</li>
-        <br /> <br />
       </ul>
     )
   }

@@ -18,6 +18,15 @@ class GameshelvesIndex extends React.Component {
     .then(() => this.props.clearGameshelfErrors());
   }
 
+  showAlert() {
+  return () => {
+    this.msg.show('Some text or component', {
+      time: 2000,
+      type: 'success',
+    });
+  };
+}
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.createGameshelf((this.state))
@@ -44,37 +53,34 @@ class GameshelvesIndex extends React.Component {
   }
 
   render() {
-    // debugger
-    // if (this.props.currentUser) {
-      const { gameshelves, deleteGameshelf, currentUser, createGameshelf, updateReview } = this.props;
-        return (
-          <div className="gameshelf-box">
-            <div>Gameshelves:</div>
+    const { gameshelves, deleteGameshelf, currentUser, createGameshelf, updateReview } = this.props;
+      return (
+        <div className="gameshelf-box">
+          <div>Gameshelves:</div>
 
-            <ul>
-              { gameshelves.map(gameshelf =>
-                <GameshelvesIndexItem className="individual-gameshelves" key={gameshelf.id} gameshelf={gameshelf} createGameshelf={createGameshelf} deleteGameshelf={deleteGameshelf} />)}
-            </ul>
+          <ul>
+            { gameshelves.map(gameshelf =>
+              <GameshelvesIndexItem className="individual-gameshelves" key={gameshelf.id} gameshelf={gameshelf} createGameshelf={createGameshelf} deleteGameshelf={deleteGameshelf} />)}
+          </ul>
 
-            <form onSubmit={this.handleSubmit}>
-              <input required
-                type="text"
-                value={this.state.title}
-                onChange={this.update("title")}
-                placeholder="Title" />
+          <form onSubmit={this.handleSubmit}>
+            <input required
+              type="text"
+              value={this.state.title}
+              onChange={this.update("title")}
+              placeholder="Title" />
 
-              <input
-                type="submit"
-                value="Add shelf"
-              />
+            <input
+              type="submit"
+              value="Add shelf"
+            />
 
-            <p>{this.props.errors}</p>
+          <p>{this.props.errors}</p>
 
-          </form>
-        </div>
-      )
-    }
-  // }
+        </form>
+      </div>
+    )
+  }
 }
 
 export default GameshelvesIndex;

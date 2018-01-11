@@ -48,22 +48,29 @@ class GameshelfShow extends React.Component {
           <div>
             <GameshelvesIndexContainer />
           </div>
-          <div>
-            {this.props.gameshelf.games.map((game, idx) => <GameshelfShowItem key={game.id} game={game} />)}
+          <div className="entire-gameshelf-box">
+            <div className="gameshelf-name">
+              <h2>Gameshelf: {this.props.gameshelf.title}</h2>
+            </div>
+            <div className="gameshelf-titles">
+              <li>Cover</li>
+              <li>Title</li>
+              <li>Year</li>
+              <li>Rating</li>
+              <li>Platform</li>
+            </div>
+            <div className="gameshelf-game-details">
+              {this.props.gameshelf.games.map((game, idx) => <GameshelfShowItem key={game.id} game={game} />)}
+            </div>
           </div>
         </div>
       )
+    } else if (this.props.gameshelf.games === []) {
+      return 'There are currently no games in this shelf';
     } else {
       return 'There are currently no games in this shelf';
     }
   }
 }
-// <img className="game-cover-img" src={`${this.props.game.cover_img_url}`} />
-// { this.props.game.title }
-// { this.props.game.year }
-// { this.props.game.rating}
-// { this.props.game.platform }
-// </div>
-//
 
 export default GameshelfShow;

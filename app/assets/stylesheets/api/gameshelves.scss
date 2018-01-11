@@ -8,7 +8,44 @@
   position: fixed;
   padding: 12px;
   border: 1px solid #b9deee;
-  margin-left: 100px;
   margin-left: 15px;
   width: 15%;
+}
+
+// .gameshelf-box {
+//   margin-top: -300px;
+//   display: flex;
+//   flex-direction: column;
+//   position: absolute;
+//   padding: 12px;
+//   border: 1px solid #b9deee;
+//   /* margin-left: 100px; */
+//   margin-left: -310px;
+//   width: 80%;
+// }
+
+.gameshelf-game-details {
+  width: 80%;
+  margin-left: 400px;
+
+  img {
+    width: 20%;
+  }
+}
+
+.gameshelf-name {
+  margin-top: 100px;
+}
+
+.gameshelf-titles {
+  display: flex;
+  padding: 40px;
+  list-style: none;
+  width: 66%;
+  float: right;
+  justify-content: space-between;
+}
+
+.gameshelf-game-image {
+
 }

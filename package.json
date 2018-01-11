@@ -10,6 +10,7 @@
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-dropdown": "^1.3.6",
     "react-image-tiler": "^1.1.5",
     "react-infinite-scroller": "^1.1.2",
     "react-loaders": "^3.0.1",

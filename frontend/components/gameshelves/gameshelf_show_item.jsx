@@ -9,19 +9,13 @@ class GameshelfShowItem extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <li>Title</li>
-          <li>Year</li>
-          <li>Rating</li>
-          <li>Platform</li>
-        </div>
         <Link to={`/games/${this.props.game.id}`}>
-          <img src={this.props.game.cover_img_url}/>
+          <div className="gameshelf-game-img"><img src={this.props.game.cover_img_url} /></div>
           <div>
-            { this.props.game.title }
-            { this.props.game.year }
-            { this.props.game.rating}/5
-            { this.props.game.platform }
+            <div className="gameshelf-game-title">{ this.props.game.title }</div>
+            <div className="gameshelf-game-year">{ this.props.game.year }</div>
+            <div className="gameshelf-game-rating">{ this.props.game.rating}/5</div>
+            <div className="gameshelf-game-platform">{ this.props.game.platform }</div>
           </div>
         </Link>
       </div>

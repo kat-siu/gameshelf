@@ -9,7 +9,7 @@ class GameShow extends React.Component {
     super(props);
 
     this.addToShelf = this.addToShelf.bind(this);
-
+    this.removeFromShelf = this.removeFromShelf.bind(this);
   }
 
   componentDidMount() {
@@ -31,12 +31,13 @@ class GameShow extends React.Component {
   // gameid and shelfid needed to create shelf membership
 
   addToShelf(e) {
-      e.preventDefault();
-      this.props.createGameshelfMembership({game_id: this.props.game.id, gameshelf_id: e.currentTarget.value });
+    e.preventDefault();
+    this.props.createGameshelfMembership({game_id: this.props.game.id, gameshelf_id: e.currentTarget.value });
   }
 
   removeFromShelf(e) {
-
+    e.preventDefault();
+    this.props.deleteGameshelfMembership({game_id: this.props.game.id, gameshelf_id: e.currentTarget.value });
   }
 
   render() {
@@ -44,13 +45,13 @@ class GameShow extends React.Component {
       return null;
     } else {
 
-    const label = this.props.gameshelves.map((gameshelf) => {
+    const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
       return (
         <section>
           <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
           <button onClick={this.addToShelf} value={gameshelf.id}>Add to shelf</button>
+          <button onClick={this.removeFromShelf} value={gameshelf.id}>Remove from shelf</button>
         </section>
-
       )
     })
 
@@ -60,8 +61,8 @@ class GameShow extends React.Component {
               <div className="left-side-show">
                 <div className="game-index-link"><Link to="/games">&lt;&lt; Back to all games</Link></div>
                 <img className="game-cover-img" src={`${this.props.game.cover_img_url}`} />
-                <GameshelvesIndexContainer />
-                {label}
+                <div className="gameshelf-box-container"><GameshelvesIndexContainer /></div>
+                {shelf_buttons}
 
               </div>
               <div className="right-side-show">
