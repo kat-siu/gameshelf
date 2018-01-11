@@ -21,7 +21,7 @@ class ReviewIndex extends React.Component {
     .then(() => this.setState({ rating: 5, body: "Your review has been submitted." }))
     .then(() => this.props.clearReviewErrors());
   }
-
+  
   componentDidMount() {
     this.props.fetchReviews(this.props.match.params.gameId);
     this.props.clearReviewErrors();

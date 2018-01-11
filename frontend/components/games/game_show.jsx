@@ -13,10 +13,14 @@ class GameShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchGames();
-    this.props.fetchGame(this.props.match.params.gameId);
-    this.props.fetchReviews();
-    this.props.fetchGameshelves(this.props.currentUser);
+    this.props.fetchGames()
+    .then(() => this.props.fetchGame(this.props.match.params.gameId));
+    // .then(() => this.props.fetchReviews());
+    // .then(() => this.props.fetchGameshelves(this.props.currentUser));
+    // this.props.fetchGame(this.props.match.params.gameId);
+    // this.props.fetchReviews();
+    // this.props.fetchGameshelves(this.props.currentUser);
+    // chain promises
   }
 
   // componentWillReceiveProps(nextProps) {
@@ -49,40 +53,54 @@ class GameShow extends React.Component {
       return (
         <section>
           <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
-          <button onClick={this.addToShelf} value={gameshelf.id}>Add to shelf</button>
-          <button onClick={this.removeFromShelf} value={gameshelf.id}>Remove from shelf</button>
+          <button onClick={this.addToShelf} value={gameshelf.id} className="styled-btn">Add to a gameshelf</button>
+          <button onClick={this.removeFromShelf} value={gameshelf.id} className="styled-btn">Remove from shelf</button>
         </section>
       )
     })
 
+    // <div class="btn-group">
+    //   <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    //     Action
+    //   </button>
+    //   <div class="dropdown-menu">
+    //     <a class="dropdown-item" href="#">Action</a>
+    //     <a class="dropdown-item" href="#">Another action</a>
+    //     <a class="dropdown-item" href="#">Something else here</a>
+    //     <div class="dropdown-divider"></div>
+    //     <a class="dropdown-item" href="#">Separated link</a>
+    //   </div>
+    // </div>
+
+
     return (
-        <div className="game-show-box">
-            <div className="game-details">
-              <div className="left-side-show">
-                <div className="game-index-link"><Link to="/games">&lt;&lt; Back to all games</Link></div>
-                <img className="game-cover-img" src={`${this.props.game.cover_img_url}`} />
-                <div className="gameshelf-box-container"><GameshelvesIndexContainer /></div>
-                {shelf_buttons}
+      <div className="game-show-box">
+        <div className="game-details">
+          <div className="left-side-show">
+            <div className="game-index-link"><Link to="/games">&lt;&lt; Back to all games</Link></div>
+            <img className="game-cover-img" src={`${this.props.game.cover_img_url}`} />
+            <div className="gameshelf-box-container"><GameshelvesIndexContainer /></div>
+            {shelf_buttons}
 
-              </div>
-              <div className="right-side-show">
-                <div className="game-title">{this.props.game.title} ({this.props.game.year})</div>
-                <div>
-                  <p className="uppercase">Platform:</p>
-                  {this.props.game.platform}
-                </div>
-                <br /> <br />
-                <div>
-                  <p className="uppercase">Description:</p>
-                  {this.props.game.description}
-                </div>
-              </div>
+          </div>
+          <div className="right-side-show">
+            <div className="game-title">{this.props.game.title} ({this.props.game.year})</div>
+            <div>
+              <p className="uppercase"><font color="#00afcc">Platform:</font></p>
+              {this.props.game.platform}
             </div>
-
-            <ReviewIndexContainer className="review-form" gameId={this.props.game.id} />
-
+            <br /> <br />
+            <div>
+              <p className="uppercase"><font color="#00afcc">Description:</font></p>
+              {this.props.game.description}
+            </div>
+          </div>
         </div>
-      )
+
+        <ReviewIndexContainer className="review-form" gameId={this.props.game.id} />
+
+      </div>
+    )
     }
   }
 }
