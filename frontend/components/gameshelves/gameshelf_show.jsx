@@ -54,7 +54,7 @@ class GameshelfShow extends React.Component {
         </div>
       )
     } else {
-      return 'There are currently no games in this shelf.this.p';
+      return 'There are currently no games in this shelf';
     }
   }
 }
@@ -64,6 +64,6 @@ class GameshelfShow extends React.Component {
 // { this.props.game.rating}
 // { this.props.game.platform }
 // </div>
-// 
+//
 
 export default GameshelfShow;
