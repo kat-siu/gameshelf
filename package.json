@@ -16,6 +16,7 @@
     "react-read-more": "^1.0.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "react-select": "^1.2.0",
     "react-star-rating": "^1.4.2",
     "react-stars": "^2.2.5",
     "redux": "^3.7.2",

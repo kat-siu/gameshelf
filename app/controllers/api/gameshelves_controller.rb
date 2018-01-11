@@ -1,6 +1,6 @@
 class Api::GameshelvesController < ApplicationController
   def index
-    @gameshelves = User.find(params[:id]).gameshelves
+    @gameshelves = current_user.gameshelves
   end
 
   def show

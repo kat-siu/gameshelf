@@ -17,10 +17,17 @@ class User < ApplicationRecord
 
   attr_reader :password
   after_initialize :ensure_session_token
+  after_create :create_default_gameshelves
 
   has_many :reviews
   has_many :gameshelves
   has_many :games, through: :gameshelves
+
+  def create_default_gameshelves
+    Gameshelf.create!(title: "Played", user_id: self.id)
+    Gameshelf.create!(title: "Want to Play", user_id: self.id)
+    Gameshelf.create!(title: "Currently Playing", user_id: self.id)
+  end
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

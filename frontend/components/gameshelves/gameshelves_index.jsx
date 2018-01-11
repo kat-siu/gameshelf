@@ -1,6 +1,5 @@
 import React from 'react';
 import GameshelvesIndexItem from './gameshelves_index_item';
-import { createGameshelf } from '../../actions/gameshelf_actions';
 
 class GameshelvesIndex extends React.Component {
   constructor(props) {
@@ -45,15 +44,16 @@ class GameshelvesIndex extends React.Component {
   }
 
   render() {
-    debugger
-    if (this.props.currentUser) {
-      const { gameshelves, deleteGameshelf, currentUser, updateReview } = this.props;
+    // debugger
+    // if (this.props.currentUser) {
+      const { gameshelves, deleteGameshelf, currentUser, createGameshelf, updateReview } = this.props;
         return (
           <div className="gameshelf-box">
             <div>Gameshelves:</div>
 
             <ul>
-              { gameshelves.map(gameshelf => <GameshelvesIndexItem className="individual-gameshelves" key={gameshelf.id} gameshelf={gameshelf} createGameshelf={createGameshelf} deleteGameshelf={deleteGameshelf} />)}
+              { gameshelves.map(gameshelf =>
+                <GameshelvesIndexItem className="individual-gameshelves" key={gameshelf.id} gameshelf={gameshelf} createGameshelf={createGameshelf} deleteGameshelf={deleteGameshelf} />)}
             </ul>
 
             <form onSubmit={this.handleSubmit}>
@@ -74,7 +74,7 @@ class GameshelvesIndex extends React.Component {
         </div>
       )
     }
-  }
+  // }
 }
 
 export default GameshelvesIndex;

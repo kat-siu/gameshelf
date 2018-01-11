@@ -1,10 +1,10 @@
 class Api::GameshelfMembershipsController < ApplicationController
   def create
+    puts 'dicks'
     @gameshelf_membership = GameshelfMembership.new(gameshelf_membership_params)
 
     if @gameshelf_membership.save
-      @gameshelf = @gameshelf_membership.shelf
-      render 'api/gameshelves/show'
+      render json: @gameshelf_membership.game
     else
       render json: @gameshelf_membership.errors.full_messages, status: 422
     end
@@ -20,6 +20,6 @@ class Api::GameshelfMembershipsController < ApplicationController
   private
 
   def gameshelf_membership_params
-    params.require(:gameshelf_membership).permit(:game_id, :user_id)
+    params.require(:gameshelf_membership).permit(:game_id, :gameshelf_id)
   end
 end

@@ -9,8 +9,8 @@ class GameshelfShowItem extends React.Component {
   render() {
     return (
       <li>
-        <Link to={`/games/${this.props.game.id}`}>
-          <img src={this.props.game.image_url}/>
+        <Link to={`/games/${this.props.gameshelf.game.id}`}>
+          <img src={this.props.gameshelf.game.cover_img_url}/>
         </Link>
       </li>
     );

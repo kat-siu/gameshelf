@@ -57,7 +57,7 @@ class ReviewIndexItem extends React.Component {
     return (
       <ul className="review-details">
         <li>{ review.created_at }</li>
-        <li>{ review.name } rated it { review.rating }</li>
+        <li>{ review.name } rated it { review.rating }/5</li>
         <li>{ review.body }</li>
         <li>{ this.deleteReview() }</li>
         <br /> <br />

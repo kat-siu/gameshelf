@@ -8,7 +8,7 @@ export const createGameshelfMembership = gameshelf_membership => {
 
 export const deleteGameshelfMembership = id => {
   return $.ajax({
-    url: `/api/gameshelves/${id}`,
+    url: `/api/gameshelf_memberships/${id}`,
     method: 'delete'
   });
 };
