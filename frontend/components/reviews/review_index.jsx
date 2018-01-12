@@ -21,7 +21,7 @@ class ReviewIndex extends React.Component {
     .then(() => this.setState({ rating: 5, body: "Your review has been submitted." }))
     .then(() => this.props.clearReviewErrors());
   }
-  
+
   componentDidMount() {
     this.props.fetchReviews(this.props.match.params.gameId);
     this.props.clearReviewErrors();
@@ -94,7 +94,7 @@ class ReviewIndex extends React.Component {
             <p>Community Reviews</p>
           </div>
           <div className="reviews">
-            <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} />)}</div>
+            <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} updateReview={updateReview} />)}</div>
           </div>
         </div>
       </div>
