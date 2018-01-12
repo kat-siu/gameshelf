@@ -15,6 +15,15 @@ GameshelfMembership.destroy_all
 guest = User.create!(name: 'Guest', username:"guest@gmail.com", password:"password")
 kat = User.create!(name: 'Kat', username:"k.siu92@gmail.com", password:"password")
 
+
+batman_arkham_city = Game.create!(
+  title: 'Batman Arkham City',
+  year: 2011,
+  description: "Batman: Arkham City builds upon the intense, atmospheric foundation of Batman: Arkham Asylum, sending players flying through the expansive Arkham City - five times larger than the game world in Batman: Arkham Asylum - the new maximum security 'home' for all of Gotham City's thugs, gangsters and insane criminal masterminds. Featuring an incredible Rogues Gallery of Gotham City's most dangerous criminals including Catwoman, The Joker, The Riddler, Two-Face, Harley Quinn, The Penguin, Mr. Freeze and many others, the game allows players to genuinely experience what it feels like to be The Dark Knight delivering justice on the streets of Gotham City. ",
+  platform: 'PlayStation 3, Xbox 360',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/308071-batman-arkham-city-playstation-3-front-cover.jpg'
+)
+
 castlevania = Game.create!(
   title: 'Castlevania: Symphony of the Night', year: 1997,
   description: 'As a descendant of Dracula, you must end the vampire bloodline. Can you rid the world of this unspeakable terror? Uncover the mystery of Castlevania and challenge an adventure as legendary as its name. Over 140 different enemies, bosses, and ghastly creatures. Awesome magical spells - transform into a bat, a wolf, or etheral mist. Hidden weapons, secrets, and characters...the largest Castlevania ever!',
@@ -123,12 +132,28 @@ Released from the capsule by Dr. Cain, 'X' is born into the world of the future 
   cover_img_url: 'http://www.mobygames.com/images/covers/l/35566-mega-man-x-snes-front-cover.jpg'
 )
 
+overwatch = Game.create!(
+  title: 'Overwatch',
+  year: 2016,
+  description: "In a time of global crisis, an international task force of heroes banded together to restore peace to a war-torn world. This organization, known as Overwatch, ended the crisis and helped maintain peace for a generation, inspiring an era of exploration, innovation, and discovery. After many years, Overwatch's influence waned and it was eventually disbanded. Now in the wake of its dismantling, conflict is rising once again. Overwatch may be gone... but the world still needs heroes.",
+  platform: 'PlayStation 4, Xbox One, Microsoft Windows',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/overwatch_2.jpg'
+)
+
 pokemon_ultra_sun = Game.create!(
   title: 'Pokémon Ultra Sun',
   year: 2017,
   description: '"Take on the role of a Pokémon Trainer and uncover new tales, and unravel the mystery behind the two forms reminiscent of the Legendary Pokémon. With new story additions and features this earns Pokémon™ Ultra Sun and Pokémon Ultra Moon the name "Ultra!" Another adventure is about to begin! New Pokémon forms have been discovered in the Aloha region in Pokémon Ultra Sun and Pokémon Ultra Moon! These forms are reminiscent of the Legendary Pokémon Solgaleo, Lunala, and Necrozma, first revealed in Pokémon Sun and Pokémon Moon. Head out on an epic journey as you solve the mystery behind these fascinating Pokémon! In this expanded adventure, get ready to explore more of the Alola region, catch more amazing Pokémon, and battle more formidable foes in Pokémon Ultra Sun and Pokémon Ultra Moon!"',
   platform: 'Nintendo 3DS',
   cover_img_url: 'https://images-na.ssl-images-amazon.com/images/I/8184Jv-yA-L._SL1500_.jpg'
+)
+
+resident_evil_four = Game.create!(
+  title: 'Resident Evil 4',
+  year: 2005,
+  description: "Resident Evil 4, known in Japan as Biohazard 4, is a third-person shooter survival horror video game developed and published by Capcom. The sixth major installment in the Resident Evil series, the game was originally released for the GameCube in North America and Japan in January 2005, and in Europe and Australia in March 2005. The story of Resident Evil 4 follows the U.S. government special agent Leon S. Kennedy, who is sent on a mission to rescue Ashley Graham, the U.S. President's daughter whom a sinister cult has kidnapped. Traveling to a rural area of Spain, Leon fights hordes of violent villagers and reunites with the mysterious spy Ada Wong.",
+  platform: 'GameCube, PlayStation 2, Microsoft Windows, Wii, Zeebo, iOS, PlayStation 3, Xbox 360, Android, PlayStation 4, Xbox One',
+  cover_img_url: 'http://www.mobygames.com/images/covers/l/71525-resident-evil-4-playstation-2-front-cover.jpg'
 )
 
 russian_subway_dogs = Game.create!(
@@ -163,12 +188,23 @@ ultimate_chicken_horse = Game.create!(
   cover_img_url: 'https://static.gamespot.com/uploads/scale_medium/1197/11970954/3017228-ultimate_chicken_horse_1.jpg'
 )
 
-overwatch = Game.create!(
-  title: 'Overwatch',
-  year: 2016,
-  description: "In a time of global crisis, an international task force of heroes banded together to restore peace to a war-torn world. This organization, known as Overwatch, ended the crisis and helped maintain peace for a generation, inspiring an era of exploration, innovation, and discovery. After many years, Overwatch's influence waned and it was eventually disbanded. Now in the wake of its dismantling, conflict is rising once again. Overwatch may be gone... but the world still needs heroes.",
-  platform: 'PlayStation 4, Xbox One, Microsoft Windows',
-  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/overwatch_2.jpg'
+sonic_the_hedgehog = Game.create!(
+  title: 'Sonic the Hedgehog',
+  year: 1991,
+  description: "On the lush, tropical paradise of South Island, Sonic the Hedgehog's animal friends begin disappearing one by one. When he discovers that the evil scientist, Dr. Ivo Robotnik, has been kidnapping them and converting them into robotic Badniks as part of a plot to collect all six of the fabled Chaos Emeralds, Sonic decides it's up to him to save them, and embarks on a quest to free his friends and thwart the evil schemes of Robotnik.
+
+  As Sonic races through the Zones of the island, he engages in numerous confrontations with the nefarious Robotnik and his deadly machines, and one by one frees the animals from their robotic shells and capsules placed at the end of almost every zone. In their final confrontation, the Doctor prepares his last dastardly contraption to end his adversary but proves no match for Sonic's awesome might, and his machine is totaled. Fleeing with his tail between his legs, Robotnik abandons his laboratory as it explodes, crumbling to scrap, with Sonic narrowly escaping. Following his escape, Sonic finally returns to the vast Green Hills where his journey began.",
+  platform: 'Sega Genesis, Master System, Game Gear, Game Boy Advance, Nintendo 3DS, iOS, Android, Apple TV',
+  cover_img_url: 'https://vignette2.wikia.nocookie.net/sonic/images/7/76/Sonic_the_Hedgehog_%281991%29_cover_art.jpeg'
+)
+
+tetris = Game.create!(
+  title: 'Tetris',
+  year: 1984,
+  description: "Tetris (Russian: Тетрис, pronounced [ˈtɛtrʲɪs]) is a tile-matching puzzle video game, originally designed and programmed by Russian game designer Alexey Pajitnov. It was released on June 6, 1984, while he was working for the Dorodnitsyn Computing Centre of the Academy of Science of the Soviet Union in Moscow. He derived its name from the Greek numerical prefix tetra- (all of the game's pieces contain four segments) and tennis, Pajitnov's favorite sport.
+  Tetris was the first entertainment software to be exported from the Soviet Union to the US, where it was published by Spectrum HoloByte for Commodore 64 and IBM PC. The Tetris game is a popular use of tetrominoes, the four-element special case of polyominoes. Polyominoes have been used in popular puzzles since at least 1907, and the name was given by the mathematician Solomon W. Golomb in 1953. However, even the enumeration of pentominoes is dated to antiquity.",
+  platform: 'Electronika 60, Acorn Electron, Amiga, Amstrad CPC, Amstrad PCW, Apple II, Apple IIgs, Atari ST, Arcade, BBC Micro, CD-i, Commodore VIC-20, Commodore 64, FM-7, Game Boy, Game Boy Color, Mac OS, MSX, NES, PC-8801, PC-9801, Mega Drive, MS-DOS, TRS-80 CoCo, WonderSwan Color, X68000, ZX Spectrum',
+  cover_img_url: 'https://img00.deviantart.net/f17a/i/2013/086/d/5/tetris_original_cover_by_zalmay-d5zi7e0.jpg'
 )
 
 typing_of_the_dead = Game.create!(
@@ -177,6 +213,14 @@ typing_of_the_dead = Game.create!(
   description: "Typing of the dead: Overkill fuses the horror and comedy of the legendary House of the Dead series with unique typing mechanics in order to deliver a truly original gaming experience! This gruesome shooter puts you in the middle of a mutant outbreak in Bayou county.",
   platform: 'Arcade game, Microsoft Windows, Dreamcast, PlayStation 2, iOS',
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/130401-the-typing-of-the-dead-dreamcast-front-cover.jpg'
+)
+
+wow = Game.create!(
+  title: 'World of Warcraft',
+  year: 2004,
+  description: "World of Warcraft® is an online role-playing experience set in the award-winning Warcraft universe. Players assume the roles of Warcraft heroes as they explore, adventure, and quest across a vast world. Being 'Massively Multiplayer,' World of Warcraft allows thousands of players to interact within the same world. Whether adventuring together or fighting against each other in epic battles, players will form friendships, forge alliances, and compete with enemies for power and glory.",
+  platform: 'Microsoft Windows, macOS',
+  cover_img_url: 'http://www.mobygames.com/images/covers/l/219531-world-of-warcraft-battle-chest-macintosh-other.jpg'
 )
 
 review1 = Review.create!(rating: 3, body: 'Fun game. Love the background music.', game_id: flinthook.id, user_id: guest.id)
