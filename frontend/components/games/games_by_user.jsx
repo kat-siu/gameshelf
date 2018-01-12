@@ -19,14 +19,10 @@ class GamesByUser extends React.Component {
 
 
   render() {
-    debugger
-
-
-
 
     const user_games = this.props.gameshelves.map(gameshelves => {
-        for (var i = 0; i < gameshelves.games.length; i++) {
-        var game = gameshelves.games[i];
+        for (let i = 0; i < gameshelves.games.length; i++) {
+        let game = gameshelves.games[i];
         console.log(game);
           return (
             <div className="no-touch">

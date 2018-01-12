@@ -48,6 +48,12 @@ class GameShow extends React.Component {
       //   }
       // }
 
+      handleDeleteGM(gameshelfId) {
+        return () => {
+          this.props.deleteGameshelfMembership({game_id: this.props.game.id, gameshelf_id: gameshelfId});
+        };
+      }
+
   render() {
     if (!this.props.game) {
       return null;
@@ -60,7 +66,7 @@ class GameShow extends React.Component {
         <section>
           <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
           <button onClick={this.addToShelf} value={gameshelf.id} className="styled-btn">Add to shelf</button>
-          <button onClick={() => this.props.deleteGameshelfMembership({game_id: this.props.game.id, gameshelf_id: this.props.gameshelf.id})} className="styled-btn">Remove from shelf</button>
+          <button onClick={this.handleDeleteGM(gameshelf.id)} className="styled-btn">Remove from shelf</button>
         </section>
         )
       })
