@@ -163,5 +163,21 @@ ultimate_chicken_horse = Game.create!(
   cover_img_url: 'https://static.gamespot.com/uploads/scale_medium/1197/11970954/3017228-ultimate_chicken_horse_1.jpg'
 )
 
+overwatch = Game.create!(
+  title: 'Overwatch',
+  year: 2016,
+  description: "In a time of global crisis, an international task force of heroes banded together to restore peace to a war-torn world. This organization, known as Overwatch, ended the crisis and helped maintain peace for a generation, inspiring an era of exploration, innovation, and discovery. After many years, Overwatch's influence waned and it was eventually disbanded. Now in the wake of its dismantling, conflict is rising once again. Overwatch may be gone... but the world still needs heroes.",
+  platform: 'PlayStation 4, Xbox One, Microsoft Windows',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/overwatch_2.jpg'
+)
+
+typing_of_the_dead = Game.create!(
+  title: 'Typing of the Dead',
+  year: 1999,
+  description: "Typing of the dead: Overkill fuses the horror and comedy of the legendary House of the Dead series with unique typing mechanics in order to deliver a truly original gaming experience! This gruesome shooter puts you in the middle of a mutant outbreak in Bayou county.",
+  platform: 'Arcade game, Microsoft Windows, Dreamcast, PlayStation 2, iOS',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/130401-the-typing-of-the-dead-dreamcast-front-cover.jpg'
+)
+
 review1 = Review.create!(rating: 3, body: 'Fun game. Love the background music.', game_id: flinthook.id, user_id: guest.id)
 review2 = Review.create!(rating: 5, body: 'Great and fun game, although it does seem a bit easy.', game_id: super_mario_odyssey.id, user_id: kat.id)
