@@ -17,8 +17,13 @@
  @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
  body {
-   font-family: 'Lato', sans-serif;
-   color: #726659;
+   font-family: 'Lato', sans-serif !important;
+   color: #726659 !important;
+ }
+
+ head {
+   font-family: 'Lato', sans-serif !important;
+   color: #726659 !important;
  }
 
  a {

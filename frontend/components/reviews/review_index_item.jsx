@@ -106,7 +106,7 @@ class ReviewIndexItem extends React.Component {
                     id="update"
                     type="submit"
                     value="UPDATE"
-                  />
+                  /><br/><br/>
 
                   <p>{this.props.errors}</p>
                   </form>
