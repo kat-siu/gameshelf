@@ -15,7 +15,6 @@ class GameshelfShow extends React.Component {
   // loop through the gameshelf and grab the game id
 
   render() {
-    debugger
     if (this.props.gameshelf) {
       return (
         <div>
@@ -24,7 +23,7 @@ class GameshelfShow extends React.Component {
           </div>
           <table class="pure-table pure-table-horizontal">
             <thead>
-              <tr>
+              <tr className="gameshelf-titles">
                 <th>Cover</th>
                 <th>Title</th>
                 <th>Year</th>

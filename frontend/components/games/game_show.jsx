@@ -35,7 +35,7 @@ class GameShow extends React.Component {
   removeFromShelf(e) {
     debugger
     e.preventDefault();
-    this.props.deleteGameshelfMembership({game_id: this.props.game.id, gameshelf_id: e.currentTarget.value });
+    this.props.deleteGameshelfMembership({game_id: this.props.game.id, gameshelf_id: this.props.gameshelf.id });
   }
 
       // if (default_shelves.includes(gameshelf.title)) {
@@ -55,16 +55,16 @@ class GameShow extends React.Component {
 
       const default_shelves = ["Played", "Currently Playing", "Want to Play"];
 
-    // const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
-    //   debugger
-    //   return (
-    //     <section>
-    //       <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
-    //       <button onClick={this.addToShelf} value={gameshelf.id} className="styled-btn">Add to a gameshelf</button>
-    //       <button onClick={this.removeFromShelf} value={gameshelf.id} className="styled-btn">Remove from shelf</button>
-    //     </section>
-    //     )
-    //   })
+    const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
+      return (
+        <section>
+          <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
+          <button onClick={this.addToShelf} value={gameshelf.id} className="styled-btn">Add to shelf</button>
+          <button onClick={() => this.props.deleteGameshelfMembership({game_id: this.props.game.id, gameshelf_id: this.props.gameshelf.id})} className="styled-btn">Remove from shelf</button>
+        </section>
+        )
+      })
+
 
     const shelf_options = this.props.gameshelves.map((gameshelf) => {
       if (default_shelves.includes(gameshelf.title)) {
@@ -83,40 +83,43 @@ class GameShow extends React.Component {
     })
 
     return (
-      <div className="game-show-box">
-        <div className="game-details">
-          <div className="left-side-show">
-            <div className="game-index-link"><Link to="/games">&lt;&lt; Back to all games</Link></div>
-            <img className="game-cover-img" src={`${this.props.game.cover_img_url}`} />
-            <div className="gameshelf-box-container"><GameshelvesIndexContainer /></div>
+      <div>
+        <div className="gameshelf-box-container"><GameshelvesIndexContainer /></div>
+        <div className="game-show-box">
+          <div className="game-details">
+            <div className="left-side-show">
+              <div className="game-index-link"><Link to="/games">&lt;&lt; Back to all games</Link></div>
+              <img className="game-cover-img" src={`${this.props.game.cover_img_url}`} />
+              {shelf_buttons}
 
-          </div>
-          <div className="right-side-show">
-            <div className="game-title">{this.props.game.title} ({this.props.game.year})</div>
-            <br />
+            </div>
+            <div className="right-side-show">
+              <div className="game-title">{this.props.game.title} ({this.props.game.year})</div>
+              <br />
 
               <div className="status-dropdown">
                 <p className="uppercase"><font color="#00afcc">Play Status: </font></p>
-                  <select onChange={this.addToShelf} name="status">
-                    <option disabled>Select Status</option>
-                    {shelf_options}
-                  </select>
+                <select onChange={this.addToShelf} name="status">
+                  <option disabled>Select Status</option>
+                  {shelf_options}
+                </select>
               </div>
 
               <br /><br />
-            <div>
-              <p className="uppercase"><font color="#00afcc">Platform:</font></p>
-              {this.props.game.platform}
-            </div>
+              <div>
+                <p className="uppercase"><font color="#00afcc">Platform:</font></p>
+                {this.props.game.platform}
+              </div>
 
-            <br /> <br />
-            <div>
-              <p className="uppercase"><font color="#00afcc">Description:</font></p>
-              {this.props.game.description}
+              <br /> <br />
+              <div>
+                <p className="uppercase"><font color="#00afcc">Description:</font></p>
+                {this.props.game.description}
+              </div>
             </div>
           </div>
+          <ReviewIndexContainer className="review-form" gameId={this.props.game.id} />
         </div>
-        <ReviewIndexContainer className="review-form" gameId={this.props.game.id} />
       </div>
     )
     }

@@ -2,27 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .gameshelf-box {
-  margin-top: 127px;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   position: fixed;
   padding: 12px;
-  border: 1px solid #b9deee;
+  // border: 1px solid #b9deee;
   margin-left: 15px;
-  width: 15%;
+  width: 17%;
 }
 
-// .gameshelf-box {
-//   margin-top: -300px;
-//   display: flex;
-//   flex-direction: column;
-//   position: absolute;
-//   padding: 12px;
-//   border: 1px solid #b9deee;
-//   /* margin-left: 100px; */
-//   margin-left: -310px;
-//   width: 80%;
-// }
+.gameshelf-box-header {
+  display: flex;
+  justify-content: center;
+  background: #00afcc;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+}
 
 .gameshelf-game-details {
   width: 80%;
@@ -39,13 +36,52 @@
 
 .gameshelf-titles {
   display: flex;
-  padding: 40px;
-  list-style: none;
-  width: 66%;
-  float: right;
   justify-content: space-between;
+  background: #00afcc;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 12px;
+  margin-right: -20px;
+}
+
+.gameshelf-game-details {
+  display: flex;
+  margin-left: 309px;
+}
+
+.gameshelf-game-title {
+  margin-top: -165px;
+  width: 25%;
+}
+
+.gameshelf-game-year {
+  margin-left: 278px;
+  margin-top: -165px;
+  width: 25%;
+}
+
+.gameshelf-game-platform {
+  width: 25%;
+  margin-left: 220px;
+  margin-top: -165px;
 }
 
 .gameshelf-game-image {
+  width: 250px;
+}
 
+.pure-table {
+  margin-top: 100px;
+  margin-left: 400px;
+  width: 67%;
+
+  img {
+    width: 250px;
+  }
+}
+
+.gameshelf-game-img {
+  width: 10px;
+  padding-bottom: 15px;
 }

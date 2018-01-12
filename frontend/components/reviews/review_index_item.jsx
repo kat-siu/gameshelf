@@ -34,7 +34,7 @@ class ReviewIndexItem extends React.Component {
 
   deleteReview() {
     if (this.props.currentUser.id === this.props.review.user_id) {
-      return <button className="styled-btn" onClick={this.handleDelete}>Delete</button>
+      return <button className="styled-btn delete-btn" onClick={this.handleDelete}>Delete</button>
     }
   }
 
@@ -51,7 +51,7 @@ class ReviewIndexItem extends React.Component {
     if (this.props.currentUser.id === this.props.review.user_id) {
       return (
         <div class="container">
-          <button type="button" className="styled-btn" data-toggle="modal" data-target="#myModal">Edit</button>
+          <button type="button" className="styled-btn edit-btn" data-toggle="modal" data-target="#myModal">Edit</button>
 
           <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
@@ -106,7 +106,6 @@ class ReviewIndexItem extends React.Component {
   }
 
   editStarRating(field) {
-    console.log("hello");
     return (e) => {this.setState({
       [field]: e.currentTarget.value});
     };

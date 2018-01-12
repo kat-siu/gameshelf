@@ -56,7 +56,7 @@ class GameshelvesIndex extends React.Component {
     const { gameshelves, deleteGameshelf, currentUser, createGameshelf, updateReview } = this.props;
       return (
         <div className="gameshelf-box">
-          <div>Gameshelves:</div>
+          <div className="gameshelf-box-header">Gameshelves:</div>
 
           <ul>
             { gameshelves.map(gameshelf =>
