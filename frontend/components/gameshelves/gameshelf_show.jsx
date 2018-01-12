@@ -1,6 +1,7 @@
 import React from 'react';
 import GameshelvesIndexContainer from './gameshelves_index_container';
-import GameshelfShowItem from  './gameshelf_show_item';
+import GameshelfShowItem from './gameshelf_show_item';
+import GameShowContainer from '../games/game_show_container';
 
 class GameshelfShow extends React.Component {
   constructor(props) {
@@ -21,21 +22,21 @@ class GameshelfShow extends React.Component {
           <div>
             <GameshelvesIndexContainer />
           </div>
-          <div className="entire-gameshelf-box">
-            <div className="gameshelf-name">
-              <h2>Gameshelf: {this.props.gameshelf.title}</h2>
-            </div>
-            <div className="gameshelf-titles">
-              <li>Cover</li>
-              <li>Title</li>
-              <li>Year</li>
-              <li>Rating</li>
-              <li>Platform</li>
-            </div>
-            <div className="gameshelf-game-details">
-              {this.props.gameshelf.games.map((game, idx) => <GameshelfShowItem key={game.id} game={game} />)}
-            </div>
-          </div>
+          <table class="pure-table pure-table-horizontal">
+            <thead>
+              <tr>
+                <th>Cover</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Platform</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {this.props.gameshelf.games.map((game, idx) => <GameshelfShowItem key={game.id} game={game} />)}
+              </tr>
+            </tbody>
+          </table>
         </div>
       )
     } else {
@@ -43,5 +44,21 @@ class GameshelfShow extends React.Component {
     }
   }
 }
+
+// <table class="pure-table pure-table-horizontal">
+//   <thead>
+//     <tr>
+//       <th>Cover</th>
+//       <th>Title</th>
+//       <th>Year</th>
+//       <th>Platform</th>
+//     </tr>
+//     <tbody>
+//       <tr>
+//         <td>{this.props.gameshelf.games.map((game, idx) => <GameshelfShowItem key={game.id} game={game} />)}</td>
+//       </tr>
+//     </tbody>
+//   </thead>
+// </table>
 
 export default GameshelfShow;

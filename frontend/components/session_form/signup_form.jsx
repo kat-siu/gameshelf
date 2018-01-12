@@ -45,7 +45,7 @@ class SignupForm extends React.Component {
       <div className="signup-form-box">
         <div className="signup-form">
           <form onSubmit={this.handleSubmit}>
-            New here? Create an account!
+            <p className="signup-header">New here? Create an account!</p>
             <label>
               <input required
                 className="signup-input"

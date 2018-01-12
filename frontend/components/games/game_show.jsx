@@ -67,7 +67,6 @@ class GameShow extends React.Component {
     //   })
 
     const shelf_options = this.props.gameshelves.map((gameshelf) => {
-      debugger
       if (default_shelves.includes(gameshelf.title)) {
         let selected = false;
         for (let i = 0; i < gameshelf.games.length; i++) {

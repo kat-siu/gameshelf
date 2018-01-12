@@ -7,6 +7,7 @@ import GamesIndexContainer from './games/games_index_container';
 import GameShowContainer from './games/game_show_container';
 import GameshelvesIndexContainer from './gameshelves/gameshelves_index_container';
 import GameshelfShowContainer from './gameshelves/gameshelf_show_container';
+import GamesByUserContainer from './games/games_by_user_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
       </header>
 
       <Switch>
-        <ProtectedRoute path ="/my_games" component={GameshelvesIndexContainer} />
+        <ProtectedRoute path ="/my_games" component={GamesByUserContainer} />
         <ProtectedRoute path="/gameshelves/:id" component={GameshelfShowContainer} />
         <ProtectedRoute path="/games/:gameId" component={GameShowContainer} />
         <ProtectedRoute path="/games" component={GamesIndexContainer} />

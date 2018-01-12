@@ -38,19 +38,6 @@ class ReviewIndexItem extends React.Component {
     }
   }
 
-  // updateReview(e) {
-  //   e.preventDefault();
-  //   this.props.updateReview(this.props.review.id).then((errors) => this.props.clearReviewErrors(errors))
-  // }
-
-  // updateReview() {
-  //   if ((this.props.currentUser.id === this.props.review.user_id) && this.state.updateReview) {
-  //     return (
-  //
-  //     )
-  //   }
-  // }
-
 
   handleUpdate(e) {
     debugger
@@ -60,17 +47,11 @@ class ReviewIndexItem extends React.Component {
   }
   // .then((errors) => this.props.clearReviewErrors(errors));
 
-  // showEditReviewForm() {
-  //   if ( this.props.currentUser.id === this.props.review.user_id ) {
-  //     this.setState({ renderEdit: this.state.renderEdit === true ? false : true })
-  //   }
-  // }
-
   renderEdit() {
     if (this.props.currentUser.id === this.props.review.user_id) {
       return (
         <div class="container">
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit</button>
+          <button type="button" className="styled-btn" data-toggle="modal" data-target="#myModal">Edit</button>
 
           <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
@@ -112,7 +93,7 @@ class ReviewIndexItem extends React.Component {
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" className="styled-btn" data-dismiss="modal">Close</button>
                 </div>
               </div>
 

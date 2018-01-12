@@ -70,7 +70,7 @@ class GameshelvesIndex extends React.Component {
               onChange={this.update("title")}
               placeholder="Title" />
 
-            <input
+            <input className="styled-btn"
               type="submit"
               value="Add shelf"
             />

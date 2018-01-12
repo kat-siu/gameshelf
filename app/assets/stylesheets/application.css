@@ -16,9 +16,11 @@
 
  @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
- body {
+#bootstrap-overrides {
    font-family: 'Lato', sans-serif !important;
    color: #726659 !important;
+   font-size: 16px;
+   text-decoration: none;
  }
 
  head {
@@ -28,4 +30,8 @@
 
  a {
    text-decoration: none;
+ }
+
+  a:hover {
+    text-decoration: none;
  }
