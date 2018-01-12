@@ -38,10 +38,8 @@ class GameshelfShow extends React.Component {
           </div>
         </div>
       )
-    } else if (this.props.gameshelf.games === []) {
-      return 'There are currently no games in this shelf';
     } else {
-      return 'There are currently no games in this shelf';
+      return null;
     }
   }
 }

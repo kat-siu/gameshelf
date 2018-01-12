@@ -57,5 +57,6 @@ export const updateGameshelf = gameshelf => dispatch => {
 };
 
 export const deleteGameshelf = gameshelf => dispatch => {
-  return GameshelfApiUtil.deleteGameshelf(gameshelf).then((gameshelf) => dispatch(removeGameshelf(gameshelf)));
+  return GameshelfApiUtil.deleteGameshelf(gameshelf)
+  .then((gameshelf) => dispatch(removeGameshelf(gameshelf)));
 };

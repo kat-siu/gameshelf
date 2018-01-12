@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :games, only: [:index, :show]
     resources :reviews, only: [:index, :show, :create, :update, :destroy]
     resources :gameshelves, only: [:index, :show, :create, :update, :destroy]
-    resources :gameshelf_memberships, only: [:create, :destroy]
+    resource :gameshelf_memberships, only: [:create, :destroy]
   end
 end

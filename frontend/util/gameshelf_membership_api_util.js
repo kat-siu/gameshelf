@@ -6,9 +6,11 @@ export const createGameshelfMembership = gameshelf_membership => {
   });
 };
 
-export const deleteGameshelfMembership = id => {
+export const deleteGameshelfMembership = gameshelf_membership => {
+  console.log("meow")
   return $.ajax({
-    url: `/api/gameshelf_memberships/${id}`,
-    method: 'delete'
+    url: '/api/gameshelf_memberships',
+    method: 'delete',
+    data: { gameshelf_membership }
   });
 };

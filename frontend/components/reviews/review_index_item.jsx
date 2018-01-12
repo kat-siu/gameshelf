@@ -13,6 +13,7 @@ class ReviewIndexItem extends React.Component {
 
     this.handleDelete = this.handleDelete.bind(this);
     this.deleteReview = this.deleteReview.bind(this);
+    // this.updateReview = this.updateReview.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,10 +36,10 @@ class ReviewIndexItem extends React.Component {
     }
   }
 
-  handleUpdate(e) {
-    e.preventDefault();
-    this.props.updateReview(this.props.review.id).then((errors) => this.props.clearReviewErrors(errors))
-  }
+  // updateReview(e) {
+  //   e.preventDefault();
+  //   this.props.updateReview(this.props.review.id).then((errors) => this.props.clearReviewErrors(errors))
+  // }
 
   // updateReview() {
   //   if ((this.props.currentUser.id === this.props.review.user_id) && this.state.updateReview) {
