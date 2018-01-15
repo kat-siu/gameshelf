@@ -7,7 +7,6 @@ export const createGameshelfMembership = gameshelf_membership => {
 };
 
 export const deleteGameshelfMembership = gameshelf_membership => {
-  console.log("meow")
   return $.ajax({
     url: '/api/gameshelf_memberships',
     method: 'delete',

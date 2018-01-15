@@ -39,7 +39,6 @@ class ReviewIndexItem extends React.Component {
   }
 
   handleUpdate(e) {
-    debugger
     e.preventDefault();
     this.props.updateReview({ id: this.state.id, rating: this.state.rating, body: this.state.body, game_id: parseInt(this.props.match.params.gameId) })
     .then(() => this.setState({ rating: 5, body: "Your review has been updated." }))
