@@ -12,8 +12,6 @@ class GameshelfShow extends React.Component {
     this.props.fetchGameshelves(this.props.currentUser);
   }
 
-  // loop through the gameshelf and grab the game id
-
   render() {
     if (this.props.gameshelf) {
       return (
@@ -43,21 +41,5 @@ class GameshelfShow extends React.Component {
     }
   }
 }
-
-// <table class="pure-table pure-table-horizontal">
-//   <thead>
-//     <tr>
-//       <th>Cover</th>
-//       <th>Title</th>
-//       <th>Year</th>
-//       <th>Platform</th>
-//     </tr>
-//     <tbody>
-//       <tr>
-//         <td>{this.props.gameshelf.games.map((game, idx) => <GameshelfShowItem key={game.id} game={game} />)}</td>
-//       </tr>
-//     </tbody>
-//   </thead>
-// </table>
 
 export default GameshelfShow;

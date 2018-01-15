@@ -34,14 +34,15 @@ class GamesIndex extends React.Component {
 
     return (
       <div>
-        <section className="gameshelf-box game-index"><GameshelvesIndexContainer /></section>
+        <section className="gameshelf-box game-index">
+          <GameshelvesIndexContainer />
+        </section>
         <div id="wrap">
           <h2>All Games:</h2>
           { games }
         </div>
       </div>
     )
-
   }
 }
 

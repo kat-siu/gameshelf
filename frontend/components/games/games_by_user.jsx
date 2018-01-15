@@ -9,17 +9,11 @@ class GamesByUser extends React.Component {
     super(props);
   }
 
-
-
   componentDidMount() {
     this.props.fetchGameshelves(this.props.currentUser);
   }
 
-
-
-
   render() {
-
     const user_games = this.props.gameshelves.map(gameshelves => {
         for (let i = 0; i < gameshelves.games.length; i++) {
         let game = gameshelves.games[i];
@@ -48,7 +42,6 @@ class GamesByUser extends React.Component {
         </div>
       </div>
     )
-
   }
 }
 

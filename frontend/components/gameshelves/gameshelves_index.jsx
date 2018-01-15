@@ -60,7 +60,13 @@ class GameshelvesIndex extends React.Component {
 
           <ul>
             { gameshelves.map(gameshelf =>
-              <GameshelvesIndexItem className="individual-gameshelves" key={gameshelf.id} gameshelf={gameshelf} createGameshelf={createGameshelf} deleteGameshelf={deleteGameshelf} />)}
+              <GameshelvesIndexItem
+                className="individual-gameshelves"
+                key={gameshelf.id}
+                gameshelf={gameshelf}
+                createGameshelf={createGameshelf}
+                deleteGameshelf={deleteGameshelf}
+              />)}
           </ul>
 
           <form onSubmit={this.handleSubmit}>
@@ -68,7 +74,8 @@ class GameshelvesIndex extends React.Component {
               type="text"
               value={this.state.title}
               onChange={this.update("title")}
-              placeholder="Title" />
+              placeholder="Title"
+            />
 
             <input className="styled-btn"
               type="submit"

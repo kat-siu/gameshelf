@@ -38,7 +38,6 @@ class ReviewIndexItem extends React.Component {
     }
   }
 
-
   handleUpdate(e) {
     debugger
     e.preventDefault();
@@ -87,7 +86,9 @@ class ReviewIndexItem extends React.Component {
                     id="update"
                     type="submit"
                     value="UPDATE"
-                  /><br/><br/>
+                  />
+
+                  <br/><br/>
 
                   <p>{this.props.errors}</p>
                   </form>
@@ -130,7 +131,5 @@ class ReviewIndexItem extends React.Component {
     )
   }
 }
-
-
 
 export default withRouter(ReviewIndexItem);

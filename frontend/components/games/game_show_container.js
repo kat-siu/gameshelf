@@ -12,7 +12,6 @@ const mapStateToProps = (state, ownProps) => {
     gameshelves: Object.values(state.entities.gameshelves),
   };
 };
-// gameshelf: state.entities.gameshelves[ownProps.match.params.gameshelfId],
 
 const mapDispatchToProps = dispatch => {
   return {
