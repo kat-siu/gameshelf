@@ -104,7 +104,7 @@ zelda_link_between_worlds = Game.create!(
   year: 2013,
   description: 'The Legend of Zelda: A Link Between Worlds is the first Zelda game made exclusively for the Nintendo 3DS is set in the fan-favorite world of The Legend of Zelda: A Link to the Past. A daring adventure awaits Link in Hyrule, where he can use his new ability to become a “drawing” and move along walls of dungeons. This opens up ways to explore and puzzle elements that give Link access to locations he could not otherwise reach.',
   platform: 'Nintendo 3DS',
-  cover_img_url: 'http://i.imgur.com/UCkJFu4.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/zelda_link_btwn_worlds.jpg'
 )
 
 zelda_breath_of_wild = Game.create!(
@@ -129,7 +129,7 @@ mega_man_x = Game.create!(
   description: "Near the end of his life, Dr. Light succeeds in creating the first of a new series of robots which will change the world. Able to think and make decisions, this new robot holds great danger as well as great possibilities. Fearful of the possible consequences of unleashing his creation on the world, Dr. Light decides to seal him in a capsule and test his systems until they are totally reliable. The future will have to decide his fate...
 Released from the capsule by Dr. Cain, 'X' is born into the world of the future where the robot rebellions are a thing of the past. But when Dr. Cain tries to implement Dr. Light's designs into a new series of Reploids, something goes hideously wrong. Now the future lies on the brink of destruction and a new Mega Man must emerge to face Sigma and his forces before the human race is wiped from the planet!",
   platform: 'Super Nintendo Entertainment System, Sega Saturn, PC, Nintendo Gamecube, PlayStation, Playstaion 2, PSP (Maverick Hunter X), Virtual Console, Nintendo Switch, Xbox One, PlayStation 4',
-  cover_img_url: 'http://www.mobygames.com/images/covers/l/35566-mega-man-x-snes-front-cover.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/megamanx.jpg'
 )
 
 overwatch = Game.create!(
@@ -153,7 +153,7 @@ resident_evil_four = Game.create!(
   year: 2005,
   description: "Resident Evil 4, known in Japan as Biohazard 4, is a third-person shooter survival horror video game developed and published by Capcom. The sixth major installment in the Resident Evil series, the game was originally released for the GameCube in North America and Japan in January 2005, and in Europe and Australia in March 2005. The story of Resident Evil 4 follows the U.S. government special agent Leon S. Kennedy, who is sent on a mission to rescue Ashley Graham, the U.S. President's daughter whom a sinister cult has kidnapped. Traveling to a rural area of Spain, Leon fights hordes of violent villagers and reunites with the mysterious spy Ada Wong.",
   platform: 'GameCube, PlayStation 2, Microsoft Windows, Wii, Zeebo, iOS, PlayStation 3, Xbox 360, Android, PlayStation 4, Xbox One',
-  cover_img_url: 'http://www.mobygames.com/images/covers/l/71525-resident-evil-4-playstation-2-front-cover.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/resident_evil_4.jpg'
 )
 
 russian_subway_dogs = Game.create!(
@@ -161,7 +161,7 @@ russian_subway_dogs = Game.create!(
   year: 2018,
   description: 'Russian Subway Dogs is simple enough for a puppy to pick up but still packed with challenge. Run and jump along the subway platform. Bark behind people to scare up food and bounce vodka around the stage. Soon you’ll be discovering high level strategies like cooking and eating rival wildlife with vodka explosions!',
   platform: 'PC (Microsoft Windows, Mac), Playstation 4, PS Vita',
-  cover_img_url: 'http://squarefaction.ru/files/game/12867/cover/russian-subway-dogs_a610819e.png'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/russian_subway_dogs.png'
 )
 
 steamworld_dig = Game.create!(
@@ -220,7 +220,7 @@ wow = Game.create!(
   year: 2004,
   description: "World of Warcraft® is an online role-playing experience set in the award-winning Warcraft universe. Players assume the roles of Warcraft heroes as they explore, adventure, and quest across a vast world. Being 'Massively Multiplayer,' World of Warcraft allows thousands of players to interact within the same world. Whether adventuring together or fighting against each other in epic battles, players will form friendships, forge alliances, and compete with enemies for power and glory.",
   platform: 'Microsoft Windows, macOS',
-  cover_img_url: 'http://www.mobygames.com/images/covers/l/219531-world-of-warcraft-battle-chest-macintosh-other.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/wow.jpg'
 )
 
 review1 = Review.create!(rating: 3, body: 'Fun game. Love the background music.', game_id: flinthook.id, user_id: guest.id)
