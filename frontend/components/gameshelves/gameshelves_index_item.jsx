@@ -21,11 +21,12 @@ class GameshelvesIndexItem extends React.Component {
     if ( !default_shelves.includes(title)) {
       return (
         <button onClick={this.handleDelete}>
-          <i className="icon-fixed-width icon-trash"></i>
+          <img src="https://s3.us-east-2.amazonaws.com/gameshelf/delete.png" className="icon-trash" width="20px" />
         </button>
       )
     }
   }
+  // <i className="icon-fixed-width icon-trash"></i>
 
   // logic - if a game is in a shelf, render button to delete and not add to shelf button
   // array - can do game.includes(this.props.game)

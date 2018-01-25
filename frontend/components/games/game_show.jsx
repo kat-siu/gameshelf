@@ -42,17 +42,33 @@ class GameShow extends React.Component {
     } else {
       const default_shelves = ["Played", "Currently Playing", "Want to Play"];
 
+      // const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
+      //   return (
+      //     <div>
+      //       <section>
+      //         <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
+      //       </section>
+      //       <button onClick={this.addToShelf} value={gameshelf.id} className="styled-btn">Add to shelf</button>
+      //       <button onClick={this.handleDeleteGM(gameshelf.id)} className="styled-btn">Remove from shelf</button>
+      //     </div>
+      //   )
+      // })
+
       const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
         return (
-          <div>
-            <section>
+          <div className="shelf-buttons-container">
+            <section className="shelf-buttons">
               <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
+              <button onClick={this.addToShelf} value={gameshelf.id} className="shelf-add-remove-btn">
+                <img src="https://s3.us-east-2.amazonaws.com/gameshelf/add.png" width="17px" />
+              </button>
+              <button onClick={this.handleDeleteGM(gameshelf.id)} className="shelf-add-remove-btn">
+                <img src="https://s3.us-east-2.amazonaws.com/gameshelf/delete.png" width="17px" />
+              </button>
             </section>
-            <button onClick={this.addToShelf} value={gameshelf.id} className="styled-btn">Add to shelf</button>
-            <button onClick={this.handleDeleteGM(gameshelf.id)} className="styled-btn">Remove from shelf</button>
           </div>
-          )
-        })
+        )
+      })
 
       const shelf_options = this.props.gameshelves.map((gameshelf) => {
         if (default_shelves.includes(gameshelf.title)) {
@@ -94,7 +110,7 @@ class GameShow extends React.Component {
               <div className="status-dropdown">
                 <p className="uppercase"><font color="#00afcc">Play Status: </font></p>
                 <select onChange={this.addToShelf} name="status">
-                  <option disabled>Select Status</option>
+                  <option>Select Status</option>
                   {shelf_options}
                 </select>
               </div>

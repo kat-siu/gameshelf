@@ -10,6 +10,14 @@
   // border: 1px solid #b9deee;
   margin-left: 15px;
   width: 17%;
+
+  button {
+    border: none;
+  }
+
+  img {
+    width: 20px;
+  }
 }
 
 .gameshelf-box-header {
@@ -84,4 +92,37 @@
 .gameshelf-game-img {
   width: 10px;
   padding-bottom: 15px;
+}
+
+.shelf-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -17px;
+}
+
+.shelf-buttons-container {
+  margin-top: 20px;
+
+  option {
+    color: #00afcc;
+    font-weight: 400;
+    margin-right: 8px;
+  }
+}
+
+.shelf-add-remove-btn {
+  border: none;
+  margin-left: -8px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.icon-trash {
+  border: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
