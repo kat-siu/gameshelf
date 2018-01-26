@@ -58,7 +58,7 @@ class GameshelvesIndex extends React.Component {
         <div className="gameshelf-box">
           <div className="gameshelf-box-header">Gameshelves:</div>
 
-          <ul>
+          <ul className="gameshelf-box-titles">
             { gameshelves.map(gameshelf =>
               <GameshelvesIndexItem
                 className="individual-gameshelves"
@@ -75,6 +75,7 @@ class GameshelvesIndex extends React.Component {
               value={this.state.title}
               onChange={this.update("title")}
               placeholder="Title"
+              className="add-shelf-form"
             />
 
             <input className="styled-btn"

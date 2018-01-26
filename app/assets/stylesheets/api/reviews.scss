@@ -181,6 +181,20 @@ body {
   width: 550px;
   margin-left: 35px;
 }
+.no-reviews {
+  list-style: none;
+  width: 550px;
+  margin-left: 35px;
+
+  p {
+    color: #00afcc;
+    letter-spacing: 2px;
+  }
+}
+
+.no-review {
+  padding-top: 30px;
+}
 
 .review-details {
   list-style: none;

@@ -86,19 +86,35 @@ class ReviewIndex extends React.Component {
 
   render() {
     const { reviews, deleteReview, currentUser, updateReview, clearReviewErrors } = this.props;
-    return (
-      <div className="review-form-and-reviews">
-        <ul>{ this.renderReviewForm() }</ul>
-        <div className="community-reviews">
-          <div className="community-review-header">
-            <p>Community Reviews</p>
-          </div>
-          <div className="reviews">
-            <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} updateReview={updateReview} />)}</div>
+    if (reviews.length > 0) {
+      return (
+        <div className="review-form-and-reviews">
+          <ul>{ this.renderReviewForm() }</ul>
+          <div className="community-reviews">
+            <div className="community-review-header">
+              <p>Community Reviews</p>
+            </div>
+            <div className="reviews">
+              <div className="review">{ reviews.map(review => <ReviewIndexItem className="individual-reviews" key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser} clearReviewErrors={clearReviewErrors} updateReview={updateReview} />)}</div>
+            </div>
           </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return (
+        <div className="review-form-and-reviews">
+          <ul>{ this.renderReviewForm() }</ul>
+          <div className="community-reviews">
+            <div className="community-review-header">
+              <p>Community Reviews</p>
+            </div>
+            <div className="no-reviews">
+              <div className="no-review">There are currently no user reviews available for this game. <br /><br /><b><font size="20px"><p>Be the first to review!</p></font></b></div>
+            </div>
+          </div>
+        </div>
+      )
+    }
   }
 }
 

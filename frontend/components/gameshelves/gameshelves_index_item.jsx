@@ -9,8 +9,6 @@ class GameshelvesIndexItem extends React.Component {
     this.renderDelete = this.renderDelete.bind(this);
   }
 
-  // attempt toggle edit form here?
-
   handleDelete(e) {
     e.preventDefault();
     this.props.deleteGameshelf(this.props.gameshelf);
