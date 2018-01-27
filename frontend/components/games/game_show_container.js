@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => {
     game: state.entities.games[ownProps.match.params.gameId],
     currentUser: state.session.currentUser,
     gameshelves: Object.values(state.entities.gameshelves),
+    reviews: Object.values(state.entities.reviews)
   };
 };
 

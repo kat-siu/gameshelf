@@ -22,7 +22,7 @@ class GameShow extends React.Component {
 
   addToShelf(e) {
     e.preventDefault();
-    this.props.createGameshelfMembership({ game_id: this.props.game.id, gameshelf_id: e.currentTarget.value });
+    this.props.createGameshelfMembership({ game_id: this.props.game.id, gameshelf_id: e.currentTarget.value }).then(() => swal("Success!", `This game was added to your shelf.`, "success"));
   }
 
   removeFromShelf(e) {
@@ -32,9 +32,24 @@ class GameShow extends React.Component {
 
   handleDeleteGM(gameshelfId) {
     return () => {
-      this.props.deleteGameshelfMembership({ game_id: this.props.game.id, gameshelf_id: gameshelfId });
-    };
+      this.props.deleteGameshelfMembership({ game_id: this.props.game.id, gameshelf_id: gameshelfId })
+      .then(() => swal("Are you sure you want to remove this game from your shelf?", {
+        buttons: ["Cancel", "Remove game from shelf"],
+    }));
+  };
   }
+
+  calcAvgRating() {
+    if (this.props.reviews.length > 0) {
+      let totalScore = 0;
+       for (let i = 0; i < this.props.reviews.length; i++) {
+         totalScore += this.props.reviews[i].rating;
+       }
+       return (Math.ceil((totalScore / this.props.reviews.length) * 2) / 2) + "/5";
+     } else {
+       return "No ratings yet.";
+     }
+   }
 
   render() {
     if (!this.props.game) {
@@ -71,9 +86,9 @@ class GameShow extends React.Component {
       })
 
       // const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
-      //   debugger
-      //   for (let i = 0; i < gameshelf.games.length; i++) {
-      //     if (gameshelf.games[i].includes(this.props.game.id)) {
+      //   for (let i = 0 ; i < gameshelf.games.length; i++) {
+      //     if (gameshelf.games[i].id == this.props.game.id) {
+      //       debugger
       //       return (
       //         <div className="shelf-buttons-container">
       //           <section className="shelf-buttons">
@@ -102,10 +117,8 @@ class GameShow extends React.Component {
       //         </div>
       //       )
       //     }
-      //   })
-      //
       //   }
-
+      // })
 
       const shelf_options = this.props.gameshelves.map((gameshelf) => {
         if (default_shelves.includes(gameshelf.title)) {
@@ -151,7 +164,12 @@ class GameShow extends React.Component {
                   {shelf_options}
                 </select>
               </div>
-              <br /><br />
+              <br /> <br />
+                <div>
+                  <p className="uppercase"><font color="#00afcc">Average Rating:</font></p>
+                  {this.calcAvgRating()}
+                </div>
+                <br /> <br />
               <div>
                 <p className="uppercase"><font color="#00afcc">Platform:</font></p>
                 {this.props.game.platform}
