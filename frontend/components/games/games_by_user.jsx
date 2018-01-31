@@ -45,9 +45,9 @@ class GamesByUser extends React.Component {
 //         }
 //     })
 // backend - grab users game ids
-    const userGames = new Set();
 
     const user_games = this.props.gameshelves.map(gameshelf => {
+      const userGames = [];
       // for (let i = 0; i < gameshelf.games.length; i++) {
       //   var userGames = [];
       //   while (userGames.last != gameshelf.games[i]) {
@@ -67,20 +67,22 @@ class GamesByUser extends React.Component {
 
       // for (let i = 0; i < gameshelf.games.length; i++) {
         debugger
-        gameshelf.games.map(game => userGames.add(game));
-      // }
-      console.log(userGames);
+
+        gameshelf.games.map(game => userGames.push(game));
+        
       return (
-          <div className="no-touch">
-            <div className="box">
-              <div className="innerContent">
-                {gameshelf.games.map((game, i) =>
-                <GamesIndexItem key={i} game={game} />
-                )}
-              </div>
+        <div className="no-touch">
+          <div className="box">
+            <div className="innerContent">
+              {userGames.map((userGame, i) =>
+              <GamesIndexItem key={i} game={userGame} />
+              )}
             </div>
           </div>
+        </div>
       )
+
+      })
 
 
       // gameshelf.map((game) => {
@@ -94,7 +96,7 @@ class GamesByUser extends React.Component {
       //   </div>
       // )})
 
-    })
+
 
     // {userGames.forEach((userGame, idx) => (
     //   <GamesIndexItem key={userGame[idx].id} game={idx} />
