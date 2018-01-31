@@ -7,6 +7,7 @@ class SignupForm extends React.Component {
     super(props);
 
     this.state = {
+      name: "",
       username: "",
       password: ""
     };
@@ -29,16 +30,17 @@ class SignupForm extends React.Component {
   }
 
   renderErrors() {
-    return (
-      <ul>
+    debugger
+    return(
+      <ul className="signup-errors-list">
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="signup-errors" key={`error-${i}`}>
             {error}
           </li>
         ))}
       </ul>
     );
-  }
+   }
 
   render() {
     return (
@@ -73,8 +75,12 @@ class SignupForm extends React.Component {
                 onChange={this.update('password')}
                 />
             </label>
-              {this.renderErrors()}
-          <input className="signup-btn" type='submit' value='Sign up' />
+            {this.renderErrors()}
+            <input
+              className="signup-btn"
+              type='submit'
+              value='Sign Up'
+            />
           </form>
         </div>
       </div>

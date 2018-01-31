@@ -47,7 +47,7 @@ class GameShow extends React.Component {
        }
        return (Math.ceil((totalScore / this.props.reviews.length) * 2) / 2) + "/5";
      } else {
-       return "No ratings yet.";
+       return "No ratings available.";
      }
    }
 
@@ -88,7 +88,7 @@ class GameShow extends React.Component {
       // const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
       //   for (let i = 0 ; i < gameshelf.games.length; i++) {
       //     if (gameshelf.games[i].id == this.props.game.id) {
-      //       debugger
+      //
       //       return (
       //         <div className="shelf-buttons-container">
       //           <section className="shelf-buttons">

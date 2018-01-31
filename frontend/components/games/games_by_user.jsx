@@ -14,24 +14,102 @@ class GamesByUser extends React.Component {
   }
 
   render() {
-    const user_games = this.props.gameshelves.map(gameshelves => {
-        for (let i = 0; i < gameshelves.games.length; i++) {
-        let game = gameshelves.games[i];
-        console.log(game);
-          return (
-            <div className="no-touch">
-              <div className="box">
-                <div className="innerContent">
-                  <GamesIndexItem key={game.id} game={game} />
-                  <div className="titleBox">
-                    {game.title} ({game.year})
-                  </div>
-                </div>
+//     const user_games = this.props.gameshelves.map(gameshelf => {
+//         for (let i = 0; i < gameshelf.games.length; i++) {
+//           let userGames = [];
+//           while (userGames.last != gameshelf.games[i]) {
+//             debugger
+//             userGames.push(gameshelf.games[i]);
+//             i++;
+//           }
+//          // {
+//           // for (let j = 0; j < userGames.length; j++) {
+//           //   debugger
+//           return (
+//             <div className="no-touch">
+//               <div className="box">
+//                 <div className="innerContent">
+//                     {userGames.map((userGame, i) => (
+//
+//                       <GamesIndexItem key={userGame} game={i} />
+//                     )}
+//
+//                   <div className="titleBox">
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           )
+// // }
+//         // }
+//         }
+//     })
+// backend - grab users game ids
+    const userGames = new Set();
+
+    const user_games = this.props.gameshelves.map(gameshelf => {
+      // for (let i = 0; i < gameshelf.games.length; i++) {
+      //   var userGames = [];
+      //   while (userGames.last != gameshelf.games[i]) {
+      //     debugger
+      //     userGames.push(gameshelf.games[i]);
+      //     i++;
+      //   }
+      // }
+      // for (let i = 0; i < gameshelf.games.length; i++) {
+      //   debugger
+      //   let game = gameshelf.games[i];
+      //   this.userGames.add(game);
+      //   // userGames2.push(userGames);
+      //   console.log(this.userGames);
+      // }
+
+
+      // for (let i = 0; i < gameshelf.games.length; i++) {
+        debugger
+        gameshelf.games.map(game => userGames.add(game));
+      // }
+      console.log(userGames);
+      return (
+          <div className="no-touch">
+            <div className="box">
+              <div className="innerContent">
+                {gameshelf.games.map((game, i) =>
+                <GamesIndexItem key={i} game={game} />
+                )}
               </div>
             </div>
-          )
-        }
+          </div>
+      )
+
+
+      // gameshelf.map((game) => {
+      // return (
+      //   <div className="no-touch">
+      //     <div className="box">
+      //       <div className="innerContent">
+      //         <GamesIndexItem key={game.id} game={game} />
+      //       </div>
+      //     </div>
+      //   </div>
+      // )})
+
     })
+
+    // {userGames.forEach((userGame, idx) => (
+    //   <GamesIndexItem key={userGame[idx].id} game={idx} />
+    // ))}
+
+//     render() {
+// const data =[{"name":"test1"},{"name":"test2"}];
+// return (
+//   <div>
+//   {data.map(function(d, idx){
+//      return (<li key={idx}>{d.name}</li>)
+//    })}
+//   </div>
+// );
+// }
 
     return (
       <div>

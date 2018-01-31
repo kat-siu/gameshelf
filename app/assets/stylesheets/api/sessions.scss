@@ -112,10 +112,39 @@ input:focus {
   border-radius: 4px;
   text-align: center;
   line-height: 22px;
-  margin-top: 5px;
+  margin-top: -7px;
   cursor: pointer;
 
   &:hover {
     background-color: #F5DA69;
   }
+}
+
+.login-errors-list {
+  list-style: none;
+  margin: 11px 0 10px -38px;
+}
+
+.login-errors {
+  background: #FF4545;
+  color: #FFF3F3;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signup-errors-list {
+  list-style: none;
+  width: 320px;
+  margin: 0 -40px 15px;
+}
+
+.signup-errors {
+  background: #FF4545;
+  color: #FFF3F3;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
 }
