@@ -1,17 +1,19 @@
 nav {
-  border-bottom: 2px solid #472614;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
-  background: #b9deee;
+  background: #00afcc;
   z-index: 1;
   padding: 15px 0 0 0;
+  color: white;
+  box-shadow: 0 5px 16px -3px grey;
 }
 
 .logo-img {
-  width: 160px;
+  width: 180px;
+  margin-top: 3px;
 }
 
 .nav-items {
@@ -22,20 +24,27 @@ nav {
   margin-right: auto;
   margin-left: auto;
 
+  .nav-welcome {
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
   .nav-link, .nav-welcome {
     padding: 10px;
   }
 
   .nav-link {
-    color: black;
-    padding: 10px;
-    text-decoration: none;
+    a {
+      color: black;
+      padding: 10px;
+    }
 
     a:hover {
       color: white;
       background: black;
       border-radius: 5px;
       padding: 10px;
+      transition: 0s;
     }
   }
 

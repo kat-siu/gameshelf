@@ -18,15 +18,6 @@ class GameshelvesIndex extends React.Component {
     .then(() => this.props.clearGameshelfErrors());
   }
 
-  showAlert() {
-  return () => {
-    this.msg.show('Some text or component', {
-      time: 2000,
-      type: 'success',
-    });
-  };
-}
-
   handleSubmit(e) {
     e.preventDefault();
     this.props.createGameshelf((this.state))
@@ -56,7 +47,7 @@ class GameshelvesIndex extends React.Component {
     const { gameshelves, deleteGameshelf, currentUser, createGameshelf, updateReview } = this.props;
       return (
         <div className="gameshelf-box">
-          <div className="gameshelf-box-header">Gameshelves:</div>
+          <div className="gameshelf-box-header">Gameshelves</div>
 
           <ul className="gameshelf-box-titles">
             { gameshelves.map(gameshelf =>

@@ -1,6 +1,6 @@
 .review-input::-webkit-input-placeholder, .review-textarea::-webkit-input-placeholder {
   color: #black;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .review-input:focus::-webkit-input-placeholder, .review-textarea:focus::-webkit-input-placeholder {
@@ -9,7 +9,7 @@
 
 .review-input::-moz-placeholder, .review-textarea::-moz-placeholder {
   color: #black;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .review-input:focus::-moz-placeholder, .review-textarea:focus::-moz-placeholder {
@@ -18,7 +18,7 @@
 
 .review-input::placeholder, .review-textarea::placeholder {
   color: #black;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .review-input:focus::placeholder, .review-textarea::focus:placeholder {
@@ -27,7 +27,7 @@
 
 .review-input::-ms-placeholder, .review-textarea::-ms-placeholder {
   color: #black;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .review-input:focus::-ms-placeholder, .review-textarea:focus::-ms-placeholder {
@@ -38,7 +38,7 @@
 
 .review-input:hover::-webkit-input-placeholder, .review-textarea:hover::-webkit-input-placeholder {
   color: black;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .review-input:hover:focus::-webkit-input-placeholder, .review-textarea:hover:focus::-webkit-input-placeholder {
@@ -47,7 +47,7 @@
 
 .review-input:hover::-moz-placeholder, .review-textarea:hover::-moz-placeholder {
   color: black;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .review-input:hover:focus::-moz-placeholder, .review-textarea:hover:focus::-moz-placeholder {
@@ -56,7 +56,7 @@
 
 .review-input:hover::placeholder, .review-textarea:hover::placeholder {
   color: black;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .review-input:hover:focus::placeholder, .review-textarea:hover:focus::placeholder {
@@ -65,7 +65,7 @@
 
 .review-input:hover::placeholder, .review-textarea:hover::placeholder {
   color: black;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .review-input:hover:focus::-ms-placeholder, .review-textarea:hover::focus:-ms-placeholder {
@@ -102,7 +102,7 @@ body {
 
 .review-input {
   font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
+  font-size: 1em;
   width: 550px;
   height: 50px;
   padding: 0px 15px 0px 15px;
@@ -132,7 +132,7 @@ body {
 
   color: #726659;
   font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
+  font-size: 1em;
 
   border: solid 1px #b9deee;
 
@@ -154,7 +154,7 @@ body {
   margin: -5px 0px 0px 0px;
 
   font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
+  font-size: 1em;
   color: #b9deee;
 
   outline:none;
@@ -216,31 +216,39 @@ body {
   padding: 0px 10px 0px 10px;
 }
 
+.user-review-body {
+  margin-top: -20px;
+}
+
 .styled-btn {
   border: 1px solid #00afcc;
   cursor: pointer;
+  border-radius: 3px;
 
   &:hover {
     background-color: #00afcc;
-    color: black;
+    color: white;
   }
 }
 
 .edit-btn {
   margin-left: 337px;
+  margin-top: 5px;
   width: 63px;
+  display: flex;
+  position: absolute;
 }
 
 .delete-btn {
   margin-left: 352px;
-  margin-top: 3px;
+  margin-top: 38px;
+  position: absolute;
 }
 
 
 .rating-form-title {
   margin-top: 16px;
 }
-
 
 //
 
@@ -258,8 +266,8 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 .review-input > input { display: none; }
 .review-input > label:before {
-  margin: 5px;
-  font-size: 1.25em;
+  margin: -6px 3px 0 0;
+  font-size: 1.5em;
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";

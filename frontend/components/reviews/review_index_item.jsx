@@ -119,7 +119,7 @@ class ReviewIndexItem extends React.Component {
         <li>{ this.deleteReview() }</li>
         <li><font color="#00afcc" weight="bold">{ review.name }</font> rated it { review.rating }/5</li>
         <li>{ review.created_at.slice(0, 10) }</li><br /><br />
-        <li><font face="Times New Roman">{ review.body }</font></li>
+        <li className="user-review-body"><font face="Times New Roman">{ review.body }</font></li>
       </ul>
     )
   }
