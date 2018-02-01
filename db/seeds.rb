@@ -28,7 +28,7 @@ castlevania = Game.create!(
   title: 'Castlevania: Symphony of the Night', year: 1997,
   description: 'As a descendant of Dracula, you must end the vampire bloodline. Can you rid the world of this unspeakable terror? Uncover the mystery of Castlevania and challenge an adventure as legendary as its name. Over 140 different enemies, bosses, and ghastly creatures. Awesome magical spells - transform into a bat, a wolf, or etheral mist. Hidden weapons, secrets, and characters...the largest Castlevania ever!',
   platform: 'PlayStation, Sega Saturn, Xbox Live Arcade',
-  cover_img_url: 'https://http2.mlstatic.com/castlevania-symphony-of-the-night-playstation-1-D_NQ_NP_416801-MLB20399814433_082015-F.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/castlevania.jpg'
 )
 
 doom = Game.create!(
@@ -36,7 +36,7 @@ doom = Game.create!(
   year: 2016,
   description: 'Developed by id software, the studio that pioneered the first-person shooter genre and created multiplayer Deathmatch, DOOM returns as a brutally fun and challenging modern-day shooter experience. Relentless demons, impossibly destructive guns, and fast, fluid movement provide the foundation for intense, first-person combat – whether you’re obliterating demon hordes through the depths of Hell in the single-player campaign, or competing against your friends in numerous multiplayer modes. Expand your gameplay experience using DOOM SnapMap game editor to easily create, play, and share your content with the world.',
   platform: 'PC (Microsoft Windows), Xbox One, PlayStation 4',
-  cover_img_url: 'https://vignette.wikia.nocookie.net/doom/images/8/85/Doom.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/doom.jpg'
 )
 
 fez = Game.create!(
@@ -44,7 +44,7 @@ fez = Game.create!(
   year: 2012,
   description: 'Gomez is a 2D creature living in a 2D world. Or is he? When the existence of a mysterious 3rd dimension is revealed to him, Gomez is sent out on a journey that will take him to the very end of time and space. Use your ability to navigate 3D structures from 4 distinct classic 2D perspectives.',
   platform: 'PlayStation 4, PlayStation 3, Xbox 360, PlayStation Vita, Microsoft Windows, Linux, Android, iOS',
-  cover_img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Fez_%28video_game%29_cover_art.png/1200px-Fez_%28video_game%29_cover_art.png'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/fez.png'
 )
 
 flinthook = Game.create!(
@@ -60,7 +60,7 @@ garfield = Game.create!(
   year: 1995,
   description: 'Odie scares Garfield while he is watching television, and he ends up falling on the television. In a rushed effort to repair the television before Jon catches them, Garfield and Odie attempt to put the banged up and broken pieces together. They did actually put something together, but it was far from being a real television. As Garfield throws away the spare pieces, they become an electronic monster, the Glitch. The Glitch transports Garfield into the television. Now he must defeat the Glitch and make his way out.',
   platform: 'Sega Mega Drive, Sega Game Gear, Windows PC',
-  cover_img_url: "https://play-roms.com/sites/default/files/packshots/sega-genesis/garfield-caught-in-the-act-usa-europe.png"
+  cover_img_url: "https://s3.us-east-2.amazonaws.com/gameshelf/garfield.png"
 )
 
 hello_neighbor = Game.create!(
@@ -68,7 +68,7 @@ hello_neighbor = Game.create!(
   year: 2017,
   description: "Hello Neighbor is a stealth horror game about sneaking into your neighbor's house to figure out what horrible secrets he's hiding in the basement. You play against an advanced AI that learns from your every move. Really enjoying climbing through that backyard window? Expect a bear trap there. Sneaking through the front door? There'll be cameras there soon. Trying to escape? The Neighbor will find a shortcut and catch you.",
   platform: 'Xbox One, PC (Microsoft Windows)',
-  cover_img_url: 'https://static-cdn.jtvnw.net/ttv-boxart/Hello%20Neighbor.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/hello_neighbor.jpg'
 )
 
 kingdom_hearts = Game.create!(
@@ -96,23 +96,7 @@ the_last_of_us = Game.create!(
   year: 2014,
   description: 'Winner of over 200 game of the year awards, The Last of Us has been remastered for the PlayStation®4. Now featuring higher resolution character models, improved shadows and lighting, in addition to several other gameplay improvements. Abandoned cities reclaimed by nature. A population decimated by a modern plague. Survivors are killing each other for food, weapons whatever they can get their hands on. Joel, a brutal survivor, and Ellie, a brave young teenage girl who is wise beyond her years, must work together if they hope to survive their journey across the US. The Last of Us: Remastered includes the Abandoned Territories Map Pack, Reclaimed Territories Map Pack, and the critically acclaimed The Last of Us: Left Behind Single Player campaign.',
   platform: 'PlayStation 4',
-  cover_img_url: 'https://images-na.ssl-images-amazon.com/images/I/61fTOuV2xlL._SX522_.jpg'
-)
-
-zelda_link_between_worlds = Game.create!(
-  title: 'The Legend of Zelda: A Link Between Worlds',
-  year: 2013,
-  description: 'The Legend of Zelda: A Link Between Worlds is the first Zelda game made exclusively for the Nintendo 3DS is set in the fan-favorite world of The Legend of Zelda: A Link to the Past. A daring adventure awaits Link in Hyrule, where he can use his new ability to become a “drawing” and move along walls of dungeons. This opens up ways to explore and puzzle elements that give Link access to locations he could not otherwise reach.',
-  platform: 'Nintendo 3DS',
-  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/zelda_link_btwn_worlds.jpg'
-)
-
-zelda_breath_of_wild = Game.create!(
-  title: 'The Legend of Zelda: Breath of the Wild',
-  year: 2017,
-  description: 'Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series. Travel across fields, through forests and to mountain peaks as you discover what has become of the ruined kingdom of Hyrule in this stunning open-air adventure.',
-  platform: 'Wii U, Nintendo Switch',
-  cover_img_url: 'https://images-na.ssl-images-amazon.com/images/I/81RbwMABstL._SL1455_.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/the_last_of_us.jpg'
 )
 
 life_is_strange = Game.create!(
@@ -120,7 +104,7 @@ life_is_strange = Game.create!(
   year: 2017,
   description: 'Life is Strange: Before the Storm is a new three part standalone story adventure set three years before the events of the first game. This time play as Chloe Price, a rebel who forms an unlikely friendship with Rachel Amber in dramatic new story in the BAFTA award winning franchise.',
   platform: 'PlayStation 4, Xbox One, PC (Microsoft Windows)',
-  cover_img_url: 'https://gpstatic.com/acache/34/03/1/uk/packshot-0640d36c1087a85f2079366e6049f9d3.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/life_is_strange.jpg'
 )
 
 mega_man_x = Game.create!(
@@ -130,6 +114,14 @@ mega_man_x = Game.create!(
 Released from the capsule by Dr. Cain, 'X' is born into the world of the future where the robot rebellions are a thing of the past. But when Dr. Cain tries to implement Dr. Light's designs into a new series of Reploids, something goes hideously wrong. Now the future lies on the brink of destruction and a new Mega Man must emerge to face Sigma and his forces before the human race is wiped from the planet!",
   platform: 'Super Nintendo Entertainment System, Sega Saturn, PC, Nintendo Gamecube, PlayStation, Playstaion 2, PSP (Maverick Hunter X), Virtual Console, Nintendo Switch, Xbox One, PlayStation 4',
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/megamanx.jpg'
+)
+
+oliver = Game.create!(
+  title: "Oliver's Outer Space Dream",
+  year: 2018,
+  description: "Oliver dreams of floating weightlessly in outer space, eating all the sushi & drumsticks that fill his heart with content. It's up to *YOU* to get as many food items as you can to increase your score! Keep afloat by pressing/holding the *SPACE BAR*. Avoid the asteroids, or Oliver will be one angry cat if he's awoken...",
+  platform: 'Web Browser',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/astro_oliver.png',
 )
 
 overwatch = Game.create!(
@@ -164,12 +156,22 @@ russian_subway_dogs = Game.create!(
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/russian_subway_dogs.png'
 )
 
+sonic_the_hedgehog = Game.create!(
+  title: 'Sonic the Hedgehog',
+  year: 1991,
+  description: "On the lush, tropical paradise of South Island, Sonic the Hedgehog's animal friends begin disappearing one by one. When he discovers that the evil scientist, Dr. Ivo Robotnik, has been kidnapping them and converting them into robotic Badniks as part of a plot to collect all six of the fabled Chaos Emeralds, Sonic decides it's up to him to save them, and embarks on a quest to free his friends and thwart the evil schemes of Robotnik.
+
+  As Sonic races through the Zones of the island, he engages in numerous confrontations with the nefarious Robotnik and his deadly machines, and one by one frees the animals from their robotic shells and capsules placed at the end of almost every zone. In their final confrontation, the Doctor prepares his last dastardly contraption to end his adversary but proves no match for Sonic's awesome might, and his machine is totaled. Fleeing with his tail between his legs, Robotnik abandons his laboratory as it explodes, crumbling to scrap, with Sonic narrowly escaping. Following his escape, Sonic finally returns to the vast Green Hills where his journey began.",
+  platform: 'Sega Genesis, Master System, Game Gear, Game Boy Advance, Nintendo 3DS, iOS, Android, Apple TV',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/sonic.jpg'
+)
+
 steamworld_dig = Game.create!(
   title: 'SteamWorld Dig',
   year: 2013,
   description: "SteamWorld Dig is a platform mining adventure with strong Metroidvanian influences. Take the role of Rusty, a lone mining steambot, as he arrives at an old mining town in great need. Dig your way through the old earth, gaining riches while uncovering the ancient threat that lurks below...",
   platform: 'PlayStation 4, Nintendo 3DS, Wii U, Xbox One, PlayStation Vita, Microsoft Windows, Linux',
-  cover_img_url: 'https://cdn02.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_download_software/SQ_NSwitchDS_SteamWorldDig2.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/steam_world_dig2.jpg'
 )
 
 super_mario_odyssey = Game.create!(
@@ -180,31 +182,13 @@ super_mario_odyssey = Game.create!(
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/Super_Mario_Odyssey_(artwork).jpg',
 )
 
-ultimate_chicken_horse = Game.create!(
-  title: 'Ultimate Chicken Horse',
-  year: 2016,
-  description: 'Ultimate Chicken Horse is a party platformer game where you build the level as you play, placing traps and hazards to screw your friends over, but trying not to screw yourself.',
-  platform: 'Steam, Playstation 4, Xbox One, Nintendo Switch (2018)',
-  cover_img_url: 'https://static.gamespot.com/uploads/scale_medium/1197/11970954/3017228-ultimate_chicken_horse_1.jpg'
-)
-
-sonic_the_hedgehog = Game.create!(
-  title: 'Sonic the Hedgehog',
-  year: 1991,
-  description: "On the lush, tropical paradise of South Island, Sonic the Hedgehog's animal friends begin disappearing one by one. When he discovers that the evil scientist, Dr. Ivo Robotnik, has been kidnapping them and converting them into robotic Badniks as part of a plot to collect all six of the fabled Chaos Emeralds, Sonic decides it's up to him to save them, and embarks on a quest to free his friends and thwart the evil schemes of Robotnik.
-
-  As Sonic races through the Zones of the island, he engages in numerous confrontations with the nefarious Robotnik and his deadly machines, and one by one frees the animals from their robotic shells and capsules placed at the end of almost every zone. In their final confrontation, the Doctor prepares his last dastardly contraption to end his adversary but proves no match for Sonic's awesome might, and his machine is totaled. Fleeing with his tail between his legs, Robotnik abandons his laboratory as it explodes, crumbling to scrap, with Sonic narrowly escaping. Following his escape, Sonic finally returns to the vast Green Hills where his journey began.",
-  platform: 'Sega Genesis, Master System, Game Gear, Game Boy Advance, Nintendo 3DS, iOS, Android, Apple TV',
-  cover_img_url: 'https://vignette2.wikia.nocookie.net/sonic/images/7/76/Sonic_the_Hedgehog_%281991%29_cover_art.jpeg'
-)
-
 tetris = Game.create!(
   title: 'Tetris',
   year: 1984,
   description: "Tetris (Russian: Тетрис, pronounced [ˈtɛtrʲɪs]) is a tile-matching puzzle video game, originally designed and programmed by Russian game designer Alexey Pajitnov. It was released on June 6, 1984, while he was working for the Dorodnitsyn Computing Centre of the Academy of Science of the Soviet Union in Moscow. He derived its name from the Greek numerical prefix tetra- (all of the game's pieces contain four segments) and tennis, Pajitnov's favorite sport.
   Tetris was the first entertainment software to be exported from the Soviet Union to the US, where it was published by Spectrum HoloByte for Commodore 64 and IBM PC. The Tetris game is a popular use of tetrominoes, the four-element special case of polyominoes. Polyominoes have been used in popular puzzles since at least 1907, and the name was given by the mathematician Solomon W. Golomb in 1953. However, even the enumeration of pentominoes is dated to antiquity.",
   platform: 'Electronika 60, Acorn Electron, Amiga, Amstrad CPC, Amstrad PCW, Apple II, Apple IIgs, Atari ST, Arcade, BBC Micro, CD-i, Commodore VIC-20, Commodore 64, FM-7, Game Boy, Game Boy Color, Mac OS, MSX, NES, PC-8801, PC-9801, Mega Drive, MS-DOS, TRS-80 CoCo, WonderSwan Color, X68000, ZX Spectrum',
-  cover_img_url: 'https://img00.deviantart.net/f17a/i/2013/086/d/5/tetris_original_cover_by_zalmay-d5zi7e0.jpg'
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/tetris.jpg'
 )
 
 typing_of_the_dead = Game.create!(
@@ -215,12 +199,36 @@ typing_of_the_dead = Game.create!(
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/130401-the-typing-of-the-dead-dreamcast-front-cover.jpg'
 )
 
+ultimate_chicken_horse = Game.create!(
+  title: 'Ultimate Chicken Horse',
+  year: 2016,
+  description: 'Ultimate Chicken Horse is a party platformer game where you build the level as you play, placing traps and hazards to screw your friends over, but trying not to screw yourself.',
+  platform: 'Steam, Playstation 4, Xbox One, Nintendo Switch (2018)',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/ultimate_chicken_horse.jpg'
+)
+
 wow = Game.create!(
   title: 'World of Warcraft',
   year: 2004,
   description: "World of Warcraft® is an online role-playing experience set in the award-winning Warcraft universe. Players assume the roles of Warcraft heroes as they explore, adventure, and quest across a vast world. Being 'Massively Multiplayer,' World of Warcraft allows thousands of players to interact within the same world. Whether adventuring together or fighting against each other in epic battles, players will form friendships, forge alliances, and compete with enemies for power and glory.",
   platform: 'Microsoft Windows, macOS',
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/wow.jpg'
+)
+
+zelda_breath_of_wild = Game.create!(
+  title: 'The Legend of Zelda: Breath of the Wild',
+  year: 2017,
+  description: 'Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series. Travel across fields, through forests and to mountain peaks as you discover what has become of the ruined kingdom of Hyrule in this stunning open-air adventure.',
+  platform: 'Wii U, Nintendo Switch',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/zelda_breath_of_wild.jpg'
+)
+
+zelda_link_between_worlds = Game.create!(
+  title: 'The Legend of Zelda: A Link Between Worlds',
+  year: 2013,
+  description: 'The Legend of Zelda: A Link Between Worlds is the first Zelda game made exclusively for the Nintendo 3DS is set in the fan-favorite world of The Legend of Zelda: A Link to the Past. A daring adventure awaits Link in Hyrule, where he can use his new ability to become a “drawing” and move along walls of dungeons. This opens up ways to explore and puzzle elements that give Link access to locations he could not otherwise reach.',
+  platform: 'Nintendo 3DS',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/zelda_link_btwn_worlds.jpg'
 )
 
 review1 = Review.create!(rating: 3, body: 'Fun game. Love the background music.', game_id: flinthook.id, user_id: guest.id)

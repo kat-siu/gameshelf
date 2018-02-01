@@ -2,7 +2,7 @@ import React from 'react';
 import GamesByUserContainer from './games_by_user_container';
 import GamesIndexItem from './games_index_item';
 import GameshelvesIndexContainer from '../gameshelves/gameshelves_index_container';
-
+import _ from 'lodash';
 
 class GamesByUser extends React.Component {
   constructor(props) {
@@ -26,12 +26,14 @@ class GamesByUser extends React.Component {
 
     const userGames3 = [].concat.apply([], userGames2);
 
-    let userGames4;
+    const userGames5 = _.uniqBy(userGames3, 'title');
+    console.log(userGames5);
 
+    let userGames4;
     if (this.props.games) {
       userGames4 = null;
     } else {
-    userGames4 = userGames3.map((game, i) => {
+    userGames4 = userGames5.map((game, i) => {
       return (
         <div className="no-touch">
           <div className="box">

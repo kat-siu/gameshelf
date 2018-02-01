@@ -42,6 +42,15 @@
   ul {
     margin-bottom: 9px;
   }
+
+  a {
+    color: #8045FF;
+
+    &:hover {
+      color: #00afcc;
+      transition: .9s;
+    }
+  }
 }
 
 .gameshelf-game-details {

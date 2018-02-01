@@ -1,8 +1,12 @@
 import React from 'react';
 
 const LoadingIcon = () => (
-  <div class='pac-man'>
-  </div>
+  <div className='loading-wrapper'>
+    <div class="pacman">
+      <div class="pacman-top"></div>
+      <div class="pacman-bottom"></div>
+      <div class="feed"></div></div>
+    </div>
 )
 
 export default LoadingIcon;

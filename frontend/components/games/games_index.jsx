@@ -1,10 +1,27 @@
 import React from 'react';
+import LoadingIcon from './loading_icon';
 import GamesIndexItem from './games_index_item';
 import GameshelvesIndexContainer from '../gameshelves/gameshelves_index_container';
 
 class GamesIndex extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  renderLoader() {
+    setTimeout(function() { this.setState({loading: false}); }.bind(this), 1000);
+    if (this.state.loading) {
+      return (
+        <div className='loading-wrapper'>
+          <div class="pacman">
+            <div class="pacman-top"></div>
+            <div class="pacman-bottom"></div>
+            <div class="feed"></div></div>
+          </div>
+        )
+    } else {
+      return null;
+    }
   }
 
   componentDidMount() {

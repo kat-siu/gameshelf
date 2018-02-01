@@ -13,3 +13,4 @@ Upon a new user signing up, he/she will be provided with three default gameshelv
 - [ ] User profiles - Allow users to upload a profile picture
 - [ ] Game recommendations / discover component
 - [ ] Make website responsive
+- [ ] Add preview video URL to game schema - when user clicks on the preview button on the game show page, it will open up a modal of a YouTube video of the gameplay (if available)

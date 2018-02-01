@@ -54,94 +54,93 @@ class GameShow extends React.Component {
     } else {
       const default_shelves = ["Played", "Currently Playing", "Want to Play"];
 
-      // const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
-      //   return (
-      //     <div>
-      //       <section>
-      //         <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
-      //       </section>
-      //       <button onClick={this.addToShelf} value={gameshelf.id} className="styled-btn">Add to shelf</button>
-      //       <button onClick={this.handleDeleteGM(gameshelf.id)} className="styled-btn">Remove from shelf</button>
-      //     </div>
-      //   )
-      // })
-      //
-      // const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
-      //   return (
-      //     <div className="shelf-buttons-container">
-      //       <section className="shelf-buttons">
-      //         <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
-      //         <button onClick={this.addToShelf} value={gameshelf.id} className="shelf-add-remove-btn">
-      //           <img src="https://s3.us-east-2.amazonaws.com/gameshelf/add1.png" width="17px" alt="Add to Gameshelf" />
-      //         </button>
-      //         <button onClick={this.handleDeleteGM(gameshelf.id)} className="shelf-add-remove-btn">
-      //           <img src="https://s3.us-east-2.amazonaws.com/gameshelf/delete1.png" width="17px" alt="Remove from Gameshelf" />
-      //         </button>
-      //       </section>
-      //     </div>
-      //   )
-      // })
-
-      let userGameshelves = [];
-      const mapGameshelves = this.props.gameshelves.map(gameshelf => {
-        userGameshelves.push(gameshelf);
-      });
-      console.log(userGameshelves);
-
-
-      let userGames2 = [];
-      const userGames = userGameshelves.forEach(gameshelf => {
-        userGames2.push(Object.values(gameshelf.games));
-      });
-      console.log(userGames2);
-
-
-      const userGames3 = [].concat.apply([], userGames2);
-      console.log(userGames3);
-
-
       const shelf_buttons = this.props.gameshelves.map((gameshelf) => {
-        for (let i = 0 ; i < gameshelf.games.length; i++) {
-          if (gameshelf.games[i].id == this.props.game.id) {
-            return (
-              <div className="shelf-buttons-container">
-                <section className="shelf-buttons">
-                  <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
-                  <button onClick={this.handleDeleteGM(gameshelf.id)} className="shelf-add-remove-btn">
-                    <img src="https://s3.us-east-2.amazonaws.com/gameshelf/delete1.png" width="17px" alt="Remove from Gameshelf" />
-                  </button>
-                </section>
-              </div>
-            )
-          } else if (gameshelf.games[i].id != this.props.game.id) {
-            return (
-              <div className="shelf-buttons-container">
-                <section className="shelf-buttons">
-                  <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
-                  <button onClick={this.addToShelf} value={gameshelf.id} className="shelf-add-remove-btn">
-                    <img src="https://s3.us-east-2.amazonaws.com/gameshelf/add1.png" width="17px" alt="Add to Gameshelf" />
-                  </button>
-
-                </section>
-              </div>
-            )
-          } else if (gameshelf.games == null) {
-            return (
-              <div className="shelf-buttons-container">
-                <section className="shelf-buttons">
-                  <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
-                  <button onClick={this.addToShelf} value={gameshelf.id} className="shelf-add-remove-btn">
-                    <img src="https://s3.us-east-2.amazonaws.com/gameshelf/add1.png" width="17px" alt="Add to Gameshelf" />
-                  </button>
-                  <button onClick={this.handleDeleteGM(gameshelf.id)} className="shelf-add-remove-btn">
-                    <img src="https://s3.us-east-2.amazonaws.com/gameshelf/delete1.png" width="17px" alt="Remove from Gameshelf" />
-                  </button>
-                </section>
-              </div>
-            )
-          }
-        }
+        return (
+          <div className="shelf-buttons-container">
+            <section className="shelf-buttons">
+              <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
+              <button onClick={this.addToShelf} value={gameshelf.id} className="shelf-add-remove-btn">
+                <img src="https://s3.us-east-2.amazonaws.com/gameshelf/add1.png" width="17px" alt="Add to Gameshelf" />
+              </button>
+              <button onClick={this.handleDeleteGM(gameshelf.id)} className="shelf-add-remove-btn">
+                <img src="https://s3.us-east-2.amazonaws.com/gameshelf/delete1.png" width="17px" alt="Remove from Gameshelf" />
+              </button>
+            </section>
+          </div>
+        )
       })
+
+    //   let userGameshelves = [];
+    //   const mapGameshelves = this.props.gameshelves.map(gameshelf => {
+    //     userGameshelves.push(gameshelf);
+    //   });
+    //
+    //   let userGames2 = [];
+    //   const userGames = userGameshelves.forEach(gameshelf => {
+    //     userGames2.push(Object.values(gameshelf.games));
+    //   });
+    //
+    //   const userGames3 = [].concat.apply([], userGames2);
+    //   // console.log(userGames3); returns an array of objects of the games
+    //
+    //   let userGames5 = [];
+    //   const shelf_buttons = userGameshelves.map((gameshelf) => {
+    //     gameshelf.games.map(game => {
+    //       for (let i = 0; i < userGames3.length; i++) {
+    //         if (!gameshelf.includes(userGames3[i])) {
+    //           userGames5.push(userGames3[i]);
+    //         }
+    //     }
+    //   });
+    // }
+    //
+    //   console.log(userGames5);
+
+      // const shelf_buttons = userGameshelves.map((gameshelf) => {
+      //   debugger
+      //   for (let i = 0; i < gameshelf.games.length; i++) {
+      //     debugger
+      //     if (gameshelf.games[i].id == this.props.game.id) {
+      //       debugger
+      //       return (
+      //         <div className="shelf-buttons-container">
+      //           <section className="shelf-buttons">
+      //             <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
+      //             <button onClick={this.handleDeleteGM(gameshelf.id)} className="shelf-add-remove-btn">
+      //               <img src="https://s3.us-east-2.amazonaws.com/gameshelf/delete1.png" width="17px" alt="Remove from Gameshelf" />
+      //             </button>
+      //           </section>
+      //         </div>
+      //       )
+      //     } else if (gameshelf.games[i].id != this.props.game.id) {
+      //       return (
+      //         <div className="shelf-buttons-container">
+      //           <section className="shelf-buttons">
+      //             <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
+      //             <button onClick={this.addToShelf} value={gameshelf.id} className="shelf-add-remove-btn">
+      //               <img src="https://s3.us-east-2.amazonaws.com/gameshelf/add1.png" width="17px" alt="Add to Gameshelf" />
+      //             </button>
+      //
+      //           </section>
+      //         </div>
+      //       )
+      //     } else if (gameshelf.games == null) {
+      //       return (
+      //         <div className="shelf-buttons-container">
+      //           <section className="shelf-buttons">
+      //             <option key={gameshelf.id} value={gameshelf.id}>{gameshelf.title}</option>
+      //             <button onClick={this.addToShelf} value={gameshelf.id} className="shelf-add-remove-btn">
+      //               <img src="https://s3.us-east-2.amazonaws.com/gameshelf/add1.png" width="17px" alt="Add to Gameshelf" />
+      //             </button>
+      //             <button onClick={this.handleDeleteGM(gameshelf.id)} className="shelf-add-remove-btn">
+      //               <img src="https://s3.us-east-2.amazonaws.com/gameshelf/delete1.png" width="17px" alt="Remove from Gameshelf" />
+      //             </button>
+      //           </section>
+      //         </div>
+      //       )
+      //     }
+      //   }
+      // })
 
       const shelf_options = this.props.gameshelves.map((gameshelf) => {
         if (default_shelves.includes(gameshelf.title)) {

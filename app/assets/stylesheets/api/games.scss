@@ -103,6 +103,15 @@
     font-weight: 800;
     letter-spacing: 1px;
     font-size: 18px;
+
+    a {
+      color: #8045FF;
+    }
+
+    a:hover {
+      color: #00afcc;
+      transition: .9s;
+    }
   }
 
   .game-details {
