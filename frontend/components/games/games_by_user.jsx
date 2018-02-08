@@ -27,13 +27,25 @@ class GamesByUser extends React.Component {
     const userGames3 = [].concat.apply([], userGames2);
 
     const userGames5 = _.uniqBy(userGames3, 'title');
-    console.log(userGames5);
+
+    function compare(a, b) {
+      const titleA = a.title.toUpperCase();
+      const titleB = b.title.toUpperCase();
+
+      let comparison = 0;
+      if (titleA > titleB) {
+        comparison = 1;
+      } else if (titleA < titleB) {
+        comparison = -1;
+      }
+      return comparison;
+    }
 
     let userGames4;
     if (this.props.games) {
       userGames4 = null;
     } else {
-    userGames4 = userGames5.map((game, i) => {
+    userGames4 = userGames5.sort(compare).map((game, i) => {
       return (
         <div className="no-touch">
           <div className="box">
