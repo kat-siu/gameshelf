@@ -14,6 +14,7 @@
 
 class Game < ApplicationRecord
   validates :title, :year, :description, :platform, :cover_img_url, presence: true
+  default_scope { order(title: :asc) }
 
   has_many :reviews
   has_many :gameshelf_memberships

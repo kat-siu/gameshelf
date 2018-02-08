@@ -71,6 +71,14 @@ hello_neighbor = Game.create!(
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/hello_neighbor.jpg'
 )
 
+jak2 = Game.create!(
+  title: 'Jak II',
+  year: 2003,
+  description: "Jak is back in another action-packed adventure, but he's not the same. In Jak II, experiments with Dark Eco gone wrong leave Jak with an uncontrollable dark side, and after two years in prison, Jak seeks vengeance. Accompanied by your trusty friend Daxter, unleash the dark powers on multiple enemies and witness amazing transformations. Armed with powerful weapons, a high-tech jetboard, an impenetrable mech suit, and a number of vehicles at your disposal, you have no excuse for failure.",
+  platform: 'PS2',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/jakii.png',
+)
+
 kingdom_hearts = Game.create!(
   title: 'Kingdom Hearts',
   year: 2002,
@@ -207,13 +215,6 @@ ultimate_chicken_horse = Game.create!(
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/ultimate_chicken_horse.jpg'
 )
 
-wow = Game.create!(
-  title: 'World of Warcraft',
-  year: 2004,
-  description: "World of Warcraft® is an online role-playing experience set in the award-winning Warcraft universe. Players assume the roles of Warcraft heroes as they explore, adventure, and quest across a vast world. Being 'Massively Multiplayer,' World of Warcraft allows thousands of players to interact within the same world. Whether adventuring together or fighting against each other in epic battles, players will form friendships, forge alliances, and compete with enemies for power and glory.",
-  platform: 'Microsoft Windows, macOS',
-  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/wow.jpg'
-)
 
 zelda_breath_of_wild = Game.create!(
   title: 'The Legend of Zelda: Breath of the Wild',
@@ -230,6 +231,15 @@ zelda_link_between_worlds = Game.create!(
   platform: 'Nintendo 3DS',
   cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/zelda_link_btwn_worlds.jpg'
 )
+
+wow = Game.create!(
+  title: 'World of Warcraft',
+  year: 2004,
+  description: "World of Warcraft® is an online role-playing experience set in the award-winning Warcraft universe. Players assume the roles of Warcraft heroes as they explore, adventure, and quest across a vast world. Being 'Massively Multiplayer,' World of Warcraft allows thousands of players to interact within the same world. Whether adventuring together or fighting against each other in epic battles, players will form friendships, forge alliances, and compete with enemies for power and glory.",
+  platform: 'Microsoft Windows, macOS',
+  cover_img_url: 'https://s3.us-east-2.amazonaws.com/gameshelf/wow.jpg'
+)
+
 
 review1 = Review.create!(rating: 3, body: 'Fun game. Love the background music.', game_id: flinthook.id, user_id: guest.id)
 review2 = Review.create!(rating: 5, body: 'Great and fun game, although it does seem a bit easy.', game_id: super_mario_odyssey.id, user_id: kat.id)

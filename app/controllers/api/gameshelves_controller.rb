@@ -1,17 +1,17 @@
 class Api::GameshelvesController < ApplicationController
   def index
-    gameset = Set.new()
-    users_gameshelves = current_user.gameshelves
-    users_gameshelves.each {
-      |gameshelf|
-    games = gameshelf.games
-      games.each {
-        |game|
-        gameset.add(game)
-      }
-    }
+    # gameset = Set.new()
+    # users_gameshelves = current_user.gameshelves
+    # users_gameshelves.each {
+    #   |gameshelf|
+    # games = gameshelf.games
+    #   games.each {
+    #     |game|
+    #     gameset.add(game)
+    #   }
+    # }
 
-    @usergames = gameset;
+    # @usergames = gameset;
     @gameshelves = current_user.gameshelves
   end
 
