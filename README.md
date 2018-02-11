@@ -2,6 +2,8 @@
 
 <a href="https://gameshelf.herokuapp.com">gameshelf: meet your next favorite video game!</a>
 
+<img src="https://s3.us-east-2.amazonaws.com/gameshelf/Screen+Shot+2018-01-15+at+10.45.31+AM.png" width="900">
+
 gameshelf is a fullstack web application inspired by Goodreads with a theme of video games.  gameshelf uses Ruby on Rails on the backend, a PostgreSQL database, and React/Redux on the frontend.
 
 <img src="https://s3.us-east-2.amazonaws.com/gameshelf/Screen+Shot+2018-01-12+at+1.58.24+PM.png" width="600">
